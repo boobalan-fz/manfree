@@ -13,6 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/Manfree-Logo.svg" type="image/svg+xml" />
+      </head>
       <body className={inter.className}>
         <Nav />
         {children}
