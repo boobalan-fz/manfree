@@ -12,10 +12,10 @@ const CourseCard = ({ data }) => {
         />
       </div>
       <div className="px-6 py-5 flex flex-col gap-3 border-x border-x-[#183D6D] border-b border-b-[#183D6D] rounded-b-md">
-        <span className="text-lg self-start font-medium py-1 px-[11.5px] rounded-md border border-[#183D6D] text-white bg-[#183D6D] ">
+        <span className="text-lg self-start font-medium py-1 px-[11.5px] rounded-md   text-[#183D6D] bg-[#e9f5fa]   ">
           {data?.title}
         </span>
-        <p className="font-normal text-lg">{data?.description}</p>
+        <p className="font-normal text-lg ">{data?.description}</p>
         <div className="flex gap-5 border-t border-t-slate-300 pt-2">
           <div
             className="flex gap-2 items-center text-[#696969]"

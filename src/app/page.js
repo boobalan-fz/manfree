@@ -188,7 +188,7 @@ export default function Home() {
           ))}
         </div>
         <button className="text-[#FF9A53]  flex gap-2 items-center justify-end hover:underline  mt-2 w-full">
-          View Events <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
+          View All <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
         </button>
       </div>
       <div className="max-w-[85rem] mx-auto py-5 px-10 md:px-10 lg:px-0 sm:px-0 ">
