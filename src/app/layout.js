@@ -1,9 +1,7 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/navigations/Nav";
 import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter } from "./font";
 
 export const metadata = {
   title: "Manfree technologies",
