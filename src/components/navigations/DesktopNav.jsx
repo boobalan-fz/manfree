@@ -7,8 +7,6 @@ import { usePathname } from "next/navigation";
 
 const DesktopNav = ({ navBar, setMobileMenuOpen, mobileMenuOpen }) => {
   const path = usePathname();
-  const isHomePage = path == "/" || true;
-  console.log(typeof path);
 
   return (
     <>
@@ -43,9 +41,7 @@ const DesktopNav = ({ navBar, setMobileMenuOpen, mobileMenuOpen }) => {
           {navBar.map((item, index) => (
             <Link
               className={`relative text-sm font-medium  ${
-                path == item.href
-                  ? "text-[#FE9601] border-l-[4px] border-[#FE9601] "
-                  : "text-white"
+                path == item.href ? "text-[#FE9601] " : "text-white"
               } leading-6  pl-3`}
               href={item.href}
               key={index}

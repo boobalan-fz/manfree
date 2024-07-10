@@ -55,7 +55,7 @@ const Footer = () => {
     <footer className="w-full px-8 py-10 sm:px-16 sm:py-14 bg-[#001424]">
       <div className="flex flex-col sm:flex-row w-full sm:justify-between gap-7  sm:items-start">
         <div>
-          <h1 className="font-semibold text-white pb-7 text-3xl">
+          <h1 className="font-semibold text-[#FF9A53] pb-7 text-3xl">
             Our Courses
           </h1>
           <span className="flex flex-col items-start gap-7 font  ">
@@ -71,7 +71,9 @@ const Footer = () => {
           </span>
         </div>
         <div>
-          <h1 className="font-semibold text-white pb-7 text-3xl">Website</h1>
+          <h1 className="font-semibold text-[#FF9A53] pb-7 text-3xl">
+            Website
+          </h1>
           <span className="flex flex-col items-start gap-7 font  ">
             {website.map((item, ind) => (
               <Link href={item.route} className=" text-[#CECECE]" key={ind}>
@@ -81,7 +83,9 @@ const Footer = () => {
           </span>
         </div>
         <div>
-          <h1 className="font-semibold text-white pb-7 text-3xl">Contact us</h1>
+          <h1 className="font-semibold text-[#FF9A53] pb-7 text-3xl">
+            Contact us
+          </h1>
           <div className="flex flex-col gap-6  text-[#CECECE] ">
             <span className=" ">
               12/2 R.V.M Complex, Avinashi Road,
@@ -100,9 +104,9 @@ const Footer = () => {
                   target="_blank"
                   href={`/${item.link}`}
                   key={ind}
-                  className="max-h-7 max-w-7"
+                  className="max-h-7 max-w-7 text-[#FF9A53]"
                 >
-                  <Image src={item.img} alt="social" />
+                  <Image src={item.img} alt="social " />
                 </a>
               ))}
             </span>

@@ -1,7 +1,15 @@
-import successBg from "@/assets/successStoryBg.png";
+import Image from "next/image";
+import computer from "@/assets/computer.jpg";
+import embeddedpic from "@/assets/embeddedpic.jpg";
+import robot from "@/assets/robot.jpg";
+import servo from "@/assets/servo.jpg";
+import motor from "@/assets/motor.jpg";
+import inventor from "@/assets/inventor.jpg";
+import CourseCard from "@/components/homepage/CourseCard";
+import LatestBlog from "@/components/homepage/LatestBlog";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { roboto_flex, rubik } from "@/app/font";
-
-import WhatWeDo from "@/components/homepage/WhatWeDo";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import AboutUs from "@/components/homepage/AboutUs";
 import HomeBanner from "@/components/homepage/HomeBanner";
 import SpecialCard from "@/components/homepage/SpecialCard";
@@ -11,8 +19,6 @@ import pcb from "@/assets/specializtions/pcb.svg";
 import automationproduct from "@/assets/specializtions/automationproduct.svg";
 import corparate from "@/assets/specializtions/corparate.svg";
 import image from "@/assets/image.png";
-import Image from "next/image";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const SpecialCardData = [
   {
@@ -53,13 +59,68 @@ const SpecialCardData = [
   },
 ];
 
+const data = [
+  {
+    title: "PLC Automation and Programming",
+    description:
+      "Streamline operations with expert PLC automation and programming.",
+    img: computer,
+  },
+  {
+    title: "Embedded Systems Development",
+    description:
+      "Innovate and integrate with our advanced embedded systems training.",
+    img: embeddedpic,
+  },
+  {
+    title: "VFD and Servo Installation",
+    description:
+      "Optimize performance with precision VFD and servo installation.",
+    img: robot,
+  },
+  {
+    title: "Software Development",
+    description:
+      "Build the future with versatile software skills in Java, Python, and more.",
+    img: servo,
+  },
+  {
+    title: "Industrial Automation",
+    description:
+      "Drive efficiency and innovation through tailored automation solutions.",
+    img: motor,
+  },
+  {
+    title: "IoT (Internet of Things)",
+    description:
+      "IoT solutions for a connected world. Innovate with smart devices and data-driven insights.",
+    img: inventor,
+  },
+];
+
+const latest = [
+  {
+    title: "Automation",
+    description:
+      "Introduction to PLC Programming: Getting Started with Automation.",
+  },
+  {
+    title: "Python",
+    description:
+      "Introduction to PLC Programming: Getting Started with Automation.",
+  },
+  {
+    title: "IoT",
+    description:
+      "Python for Data Analysis: Applications in IoT and Automation.",
+  },
+];
+
 export default function Home() {
   return (
     <div>
       <HomeBanner />
-      <div>
-        <AboutUs />
-      </div>
+      <AboutUs />
       <div
         className={`${roboto_flex.className} bg-[#F5F9FB] px-8 py-10 sm:px-16 sm:py-14`}
       >
@@ -117,8 +178,35 @@ export default function Home() {
           <Image src={image} alt="success" />
         </div>
       </div>
-      <div>
-        <WhatWeDo />
+      <div className="max-w-[85rem] mx-auto py-5 px-10 md:px-10 lg:px-0 sm:px-0">
+        <h1 className="text-5xl text-center font-semibold text-[#183D6D] mb-10">
+          Popular courses
+        </h1>
+        <div className="grid sm:grid-cols-3 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 ">
+          {data?.map((item, index) => (
+            <CourseCard data={item} key={index} />
+          ))}
+        </div>
+        <button className="text-[#FF9A53]  flex gap-2 items-center justify-end hover:underline  mt-2 w-full">
+          View Events <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
+        </button>
+      </div>
+      <div className="max-w-[85rem] mx-auto py-5 px-10 md:px-10 lg:px-0 sm:px-0 ">
+        <h1 className="text-5xl text-center font-semibold text-[#183D6D] mb-10">
+          Latest from our blogs
+        </h1>
+        <p className="text-center font-normal text-base mx-auto max-w-6xl">
+          Explore our latest blog posts at Manfree Technologies covering
+          cutting-edge topics in industrial automation, IoT innovations with
+          Raspberry Pi, and the power of Python in data analysis and automation.
+          Stay informed with practical insights and real-world applications to
+          stay ahead in technology.
+        </p>
+        <div className="grid sm:grid-cols-3 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-7">
+          {latest?.map((item, index) => (
+            <LatestBlog data={item} key={index} />
+          ))}
+        </div>
       </div>
     </div>
   );
