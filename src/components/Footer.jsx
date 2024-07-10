@@ -53,7 +53,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full px-8 py-10 sm:px-16 sm:py-14 bg-[#001424]">
-      <div className="flex flex-col sm:flex-row w-full sm:justify-between gap-7  sm:items-center ">
+      <div className="flex flex-col sm:flex-row w-full sm:justify-between gap-7  sm:items-start">
         <div>
           <h1 className="font-semibold text-white pb-7 text-3xl">
             Our Courses
