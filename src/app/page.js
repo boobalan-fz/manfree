@@ -1,120 +1,14 @@
 import Image from "next/image";
-import computer from "@/assets/computer.jpg";
-import embeddedpic from "@/assets/embeddedpic.jpg";
-import robot from "@/assets/robot.jpg";
-import servo from "@/assets/servo.jpg";
-import motor from "@/assets/motor.jpg";
-import inventor from "@/assets/inventor.jpg";
 import CourseCard from "@/components/homepage/CourseCard";
 import LatestBlog from "@/components/homepage/LatestBlog";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { roboto_flex, rubik } from "@/app/font";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import AboutUs from "@/components/homepage/AboutUs";
 import HomeBanner from "@/components/homepage/HomeBanner";
 import SpecialCard from "@/components/homepage/SpecialCard";
-import training from "@/assets/specializtions/training.svg";
-import productdevelopment from "@/assets/specializtions/productdevelopment.svg";
-import pcb from "@/assets/specializtions/pcb.svg";
-import automationproduct from "@/assets/specializtions/automationproduct.svg";
-import corparate from "@/assets/specializtions/corparate.svg";
 import image from "@/assets/image.png";
-
-const SpecialCardData = [
-  {
-    title: "Training",
-    content:
-      "Master skills in Industrial Automation, Embedded Systems, and Software Development with our hands-on courses. Elevate your career with expert-led training at Manfree Technologies.",
-    img: training,
-  },
-  {
-    title: "Product Development",
-    content:
-      "Create custom solutions with our expert product development in PIC, STM 32, and Arduino microcontrollers.",
-    img: productdevelopment,
-  },
-  {
-    title: "Automation Projects",
-    content:
-      "Achieve efficiency with our expertise in PLC automation, programming, and VFD installation.",
-    img: automationproduct,
-  },
-  {
-    title: "Corporate Training",
-    content:
-      "Empower your team with our tailored corporate training in automation, embedded systems, and software development.",
-    img: corparate,
-  },
-  {
-    title: "PCB Design",
-    content:
-      "Get precision and reliability with our custom PCB design and development services.",
-    img: pcb,
-  },
-  {
-    title: "Placements",
-    content:
-      "Our specialized courses offer robust placement support with leading companies, including resume building, interview preparation, and direct job placements to kickstart your career.",
-    img: pcb,
-  },
-];
-
-const data = [
-  {
-    title: "PLC Automation and Programming",
-    description:
-      "Streamline operations with expert PLC automation and programming.",
-    img: computer,
-  },
-  {
-    title: "Embedded Systems Development",
-    description:
-      "Innovate and integrate with our advanced embedded systems training.",
-    img: embeddedpic,
-  },
-  {
-    title: "VFD and Servo Installation",
-    description:
-      "Optimize performance with precision VFD and servo installation.",
-    img: robot,
-  },
-  {
-    title: "Software Development",
-    description:
-      "Build the future with versatile software skills in Java, Python, and more.",
-    img: servo,
-  },
-  {
-    title: "Industrial Automation",
-    description:
-      "Drive efficiency and innovation through tailored automation solutions.",
-    img: motor,
-  },
-  {
-    title: "IoT (Internet of Things)",
-    description:
-      "IoT solutions for a connected world. Innovate with smart devices and data-driven insights.",
-    img: inventor,
-  },
-];
-
-const latest = [
-  {
-    title: "Automation",
-    description:
-      "Introduction to PLC Programming: Getting Started with Automation.",
-  },
-  {
-    title: "Python",
-    description:
-      "Introduction to PLC Programming: Getting Started with Automation.",
-  },
-  {
-    title: "IoT",
-    description:
-      "Python for Data Analysis: Applications in IoT and Automation.",
-  },
-];
+import Review from "@/components/homepage/Review";
+import { SpecialCardData, data, latest } from "@/constant/dummy";
 
 export default function Home() {
   return (
@@ -161,8 +55,8 @@ export default function Home() {
               training and develop innovative, future-ready products.
             </p>
 
-            <button className="pt-4 flex  text-[#FF9A53] text-sm items-center justify-center">
-              View All <ArrowRightIcon className="w-4 h-4" />
+            <button className="pt-4 flex  gap-1 text-[#FF9A53] text-sm items-center justify-center">
+              View All <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
             </button>
           </div>
           <div className="grid grid-cols-2  gap-10 pt-8 w-full h-52">
@@ -206,6 +100,18 @@ export default function Home() {
           {latest?.map((item, index) => (
             <LatestBlog data={item} key={index} />
           ))}
+        </div>
+      </div>
+      <div className={`px-8 py-10 sm:px-16 sm:py-14 `}>
+        <h1
+          className={`${rubik.className} text-4xl text-center  sm:text-5xl font-semibold  text-[#183D6D]`}
+        >
+          Reviews
+        </h1>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <Review />
+          <Review />
+          <Review />
         </div>
       </div>
     </div>

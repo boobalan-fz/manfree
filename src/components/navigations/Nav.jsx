@@ -18,6 +18,10 @@ const Nav = () => {
       href: "/courses",
     },
     {
+      name: "BLOGS",
+      href: "/blogs",
+    },
+    {
       name: "CONTACT US",
       href: "/contact",
     },

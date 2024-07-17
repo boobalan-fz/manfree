@@ -1,0 +1,208 @@
+"use client";
+import { useState, useEffect } from "react";
+import { poppins, rubik } from "@/app/font";
+import CourseTitle from "@/components/course/CourseTitle";
+import Image from "next/image";
+import image from "@/assets/image.png";
+import tikicon from "@/assets/icons/tikicon.svg";
+import { faq, WYWL, courseIncludes } from "@/constant/dummy";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+const Page = () => {
+  return (
+    <div className="">
+      <CourseTitle />
+      <div className=" max-w-[1920px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-5 sm:px-20 px-4 sm:gap-20 ">
+          <div className="py-4 sm:col-span-3">
+            {/* course description */}
+            <div className="pt-8">
+              <h1
+                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+              >
+                Course Description
+              </h1>
+              <p
+                className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
+              >
+                Embedded Systems combine hardware and software, featuring
+                electronic circuits with programmable chips like
+                microcontrollers or microprocessors, to control and monitor
+                applications. Using programming languages such as C, C++, and
+                Python, these systems are essential in devices like digital
+                watches, TVs, mobile phones, washing machines, microwaves,
+                security cameras, traffic controllers, ATMs, home automation,
+                E-vehicles, robotics, medical devices, IoT products, and
+                automotive ECUs.
+              </p>
+            </div>
+
+            {/* what you will learn */}
+            <div className="py-8">
+              <h1
+                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+              >
+                What you will learn
+              </h1>
+              <ul className="pt-4 flex flex-col gap-4 justify-center">
+                {WYWL.map((item, index) => (
+                  <li key={index} className="flex gap-2 items-start pr-10  ">
+                    <Image src={tikicon} alt="img" className="h-5 w-5" />
+                    <p
+                      className={`${poppins.className} text-[#797A84] text-sm `}
+                    >
+                      {item}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* course content */}
+            <div className="pb-8">
+              <h1
+                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+              >
+                Course Content
+              </h1>
+
+              <ul className="flex  flex-col gap-4 pt-8">
+                {[...Array(3)].map((_, index) => (
+                  <button
+                    key={index}
+                    className={`${rubik.className} font-semibold w-full flex justify-between items-center rounded-md text-[#183D6D] px-6 py-2 text-xl border-[1px]`}
+                  >
+                    Topic
+                    <ChevronDownIcon className="h-4 w-4 font-semibold" />
+                  </button>
+                ))}
+              </ul>
+            </div>
+
+            {/* job oppurtuintes */}
+            <div className="pb-8">
+              <h1
+                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+              >
+                Embedded job opportunities
+              </h1>
+              <p
+                className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
+              >
+                Embedded systems are a core industry field with high demand and
+                well-paid jobs. They play a crucial role in IoT, ML, AI, and
+                Robotics. Careers include Embedded Hardware Engineer, Software
+                Engineer, Robotics Engineer, Firmware Engineer, Systems
+                Engineer, and Product Design Engineer, with opportunities at
+                companies like Philips, Samsung, Siemens, and Bosch. With
+                experience, one can also become a freelancer or entrepreneur in
+                embedded programming and product development.
+              </p>
+            </div>
+
+            {/* pre-requisite */}
+            <div className="pb-8">
+              <h1
+                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+              >
+                Pre-Requisite
+              </h1>
+              <p
+                className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
+              >
+                Anyone who is looking for good embedded job or interested in
+                business developing electronic products or embedded based
+                projects and services.
+              </p>
+            </div>
+
+            {/* who is this course*/}
+            <div className="pb-8">
+              <h1
+                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+              >
+                Who is this course for ?
+              </h1>
+              <p
+                className={`${poppins.className} text-[#797A84] text-justify text-base pt-5 sm:pr-52 `}
+              >
+                College students (ME/BE/Msc/ Bsc/Diploma. Circuit branches are
+                more related).
+                <span className="pt-4 block">
+                  Embedded Job Seekers (ME/BE/Msc/ Bsc/Diploma passed out
+                  students & one who is working in non technical field looking
+                  for good embedded jobs).
+                </span>
+              </p>
+            </div>
+
+            {/* faq */}
+            <div className="pb-8">
+              <h1
+                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+              >
+                FAQ related to this course
+              </h1>
+
+              <ul className="flex  flex-col gap-2 pt-8">
+                {faq.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`${rubik.className} font-semibold w-full flex justify-between items-center  text-[#183D6D]  py-4 text-base border-b-[1.5px]`}
+                  >
+                    {_}
+                    <ChevronDownIcon className="h-4 w-4 font-semibold" />
+                  </button>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="w-full  pb-4 sm:pb-0 sm:col-span-2 flex justify-center items-start">
+            <div
+              className={` -mt-[120px] top-0 sm:sticky rounded drop-shadow-xl bg-white transition-opacity duration-[80ms] w-[380px] lg:w-[440px]    sm:shadow-lg sm:opacity-100 sm:transform sm:translate-y-0 sm:scale-100 sm:transition-none sm:duration-0 sm:ease-in-out`}
+            >
+              <div className="  p-6">
+                <div className="bg-[#F1F1F1] flex items-center justify-center rounded-md px-24 py-24">
+                  <Image src={image} alt="dummy" className="w-24 h-16" />
+                </div>
+                <div>
+                  <h3
+                    className={`${rubik.className} font-semibold text-lg text-[#183D6D]`}
+                  >
+                    This Course Includes
+                  </h3>
+                  <ul className="flex flex-col items-start">
+                    {courseIncludes.map((item, index) => (
+                      <li key={index} className="flex gap-4 items-center pt-3 ">
+                        <Image src={item.img} alt="img" className="w-6 h-6" />
+
+                        <p
+                          className={`${poppins.className} text-[#797A84] text-sm`}
+                        >
+                          {item.title}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button
+                    className={`${rubik.className} hidden sm:block bg-[#183D6D] mt-4 text-[#FF9A53] rounded-lg text-center py-2 font-semibold w-full text-lg`}
+                  >
+                    Join Course
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        className={`${rubik.className} fixed bottom-0 sm:hidden bg-[#183D6D] mt-2 text-[#FF9A53] rounded-lg text-center py-4 font-semibold w-full text-lg`}
+      >
+        Join Course
+      </button>
+    </div>
+  );
+};
+
+export default Page;
