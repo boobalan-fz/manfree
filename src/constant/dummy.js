@@ -112,10 +112,12 @@ export const latest = [
 ];
 
 export const WYWL = [
-  "Deep knowledge of both hardware and software used in embedded systems.",
-  "Proficiency in circuit designing and understanding of components used in circuits.",
-  "Ability to select perfect/suitable components for specific applications.Strong knowledge of microcontrollers.",
-  "Proficiency in programming languages such as C (Embedded C), C++ (Embedded C++), or Python (Embedded Python).",
+  "Deep knowledge about Panel board, Panel wiring, Panel board components working principles, Components Selection",
+  "Good PLC programming skills with more than 10 PLC brands like Siemens, Omron, AB, ABB, Schneider, Delta, Phoenix, Selec, Fuji, Mitsubishi etc.,",
+  "Advanced concepts like 16bit/32bit Arithmetic and Data handling instructions, Modbus, Ethernet, Profibus protocols, HMI programming with Animations, Report Generation, Macro and Recipe Programming",
+  "PLC hardware wiring, PLC & HMI interfacing using Rs232 & RS485 protocols, VFD programming, Interfacing PLC, HMI & VFD using different protocols",
+  "Developing an Automation project by using only HMI & VFD without using PLC, Servo and Stepper motor concepts",
+  "SCADA programming with Tag creations, Animations, Report generation, Controlling & monitoring PLC",
 ];
 
 export const faq = [
