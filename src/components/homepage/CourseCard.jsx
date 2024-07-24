@@ -17,17 +17,11 @@ const CourseCard = ({ data }) => {
         </span>
         <p className="font-normal text-lg ">{data?.description}</p>
         <div className="flex gap-5 border-t border-t-slate-300 pt-2">
-          <div
-            className="flex gap-2 items-center text-[#696969]"
-            title="Lessons"
-          >
+          <div className="flex gap-2 items-center text-[#696969]">
             <BookOpenIcon className="w-5 h-5 text-[#FF9A53]" />
             22 Modules
           </div>
-          <div
-            className="flex gap-2 items-center text-[#696969]"
-            title="Lessons"
-          >
+          <div className="flex gap-2 items-center text-[#696969]">
             <ClockIcon className="w-5 h-5 text-[#FF9A53]" />6 Hrs
           </div>
         </div>

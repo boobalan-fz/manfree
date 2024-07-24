@@ -21,18 +21,12 @@ const LatestBlog = ({ data }) => {
           {data?.title}
         </span>
         <div className="flex gap-5  ">
-          <div
-            className="flex gap-2 items-center text-base font-normal text-[#696969]"
-            title="Lessons"
-          >
+          <div className="flex gap-2 items-center text-base font-normal text-[#696969]">
             <CalendarIcon className="w-5 h-5 text-[#FF9A53]" />
             12 Aug, 2024
           </div>
           <div>/</div>
-          <div
-            className="flex gap-2 items-center text-base font-normal text-[#696969]"
-            title="Lessons"
-          >
+          <div className="flex gap-2 items-center text-base font-normal text-[#696969]">
             <ClockIcon className="w-5 h-5 text-[#FF9A53]" />
             Education
           </div>

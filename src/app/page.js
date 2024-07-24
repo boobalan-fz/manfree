@@ -19,6 +19,7 @@ import pcb from "@/assets/specializtions/pcb.svg";
 import automationproduct from "@/assets/specializtions/automationproduct.svg";
 import corparate from "@/assets/specializtions/corparate.svg";
 import image from "@/assets/image.png";
+import Marquee from "@/components/homepage/Marquee";
 
 const SpecialCardData = [
   {
@@ -207,6 +208,12 @@ export default function Home() {
             <LatestBlog data={item} key={index} />
           ))}
         </div>
+      </div>
+      <div className="py-5 px-10 md:px-10 lg:px-0 sm:px-0">
+        <h1 className=" text-4xl text-center  sm:text-5xl font-semibold  text-[#183D6D] ">
+          Our Students Work In
+        </h1>
+        <Marquee />
       </div>
     </div>
   );
