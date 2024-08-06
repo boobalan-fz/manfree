@@ -186,7 +186,7 @@ export default function Home() {
           <Image src={image} alt="success" />
         </div>
       </div>
-      <div className="max-w-[85rem] mx-auto py-5 px-10 md:px-10 lg:px-0 sm:px-0">
+      <div className="mx-16 py-5 px-10 md:px-10 lg:px-0 sm:px-0">
         <h1 className="text-5xl text-center font-semibold text-[#183D6D] mb-10">
           Popular courses
         </h1>
@@ -202,7 +202,7 @@ export default function Home() {
           View All <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
         </Link>
       </div>
-      <div className="max-w-[85rem] mx-auto py-5 px-10 md:px-10 lg:px-0 sm:px-0 ">
+      <div className="mx-16 py-5 px-10 md:px-10 lg:px-0 sm:px-0 ">
         <h1 className="text-5xl text-center font-semibold text-[#183D6D] mb-10">
           Latest from our blogs
         </h1>
