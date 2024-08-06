@@ -4,8 +4,8 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const AboutUs = () => {
   return (
-    <div>
-      <div className="max-w-[85rem] mx-auto py-20  px-10 md:px-10 lg:px-0 sm:px-0">
+    <div className="mx-16">
+      <div className=" py-20  px-10 md:px-10 lg:px-0 sm:px-0">
         <h1 className="text-5xl  font-semibold text-[#183D6D] mb-10">
           About us
         </h1>
