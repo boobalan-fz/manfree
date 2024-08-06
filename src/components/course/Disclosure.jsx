@@ -25,7 +25,7 @@ export default function Example({ data }) {
             <ul className="flex flex-col gap-3">
               {data.content.map((item, index) => (
                 <li className=" flex gap-3 items-center" key={index}>
-                  <Image src={list} />
+                  <Image src={list} alt="dummy" />
                   <h1
                     className={`text-[#797A84] ${poppins.className} font-normal text-base`}
                   >

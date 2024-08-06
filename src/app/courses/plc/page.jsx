@@ -95,7 +95,7 @@ const Page = () => {
                 PLC maintenance engineer in Industrial Automation Panel
                 Builders, Automation Product dealers, or at manufacturing
                 industries. Also can become a PLC programmer or Automation
-                engineer in MNC's like Siemens, AB, ABB, Delta, Mitsubishi,
+                engineer in MNC&apos;s like Siemens, AB, ABB, Delta, Mitsubishi,
                 Schneider Electric, Fuji, Omron etc. Over a period of time with
                 good experience in PLC programming and Control Panel there is a
                 high chance to be a PLC programming freelancer or entrepreneur

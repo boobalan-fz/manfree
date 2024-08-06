@@ -32,14 +32,14 @@ const Page = () => {
               >
                 Industrial Automation is nothing but implementing the automation
                 in the industries for controlling and monitoring different
-                processes and machinery's in an industry to reduce or improve a
-                human work. It is achieved by closed loop control systems and
-                information technologies using Panel Components, Sensors,
-                Conveyors, Motors & Drives, Robot Arms, PLCs, HMIs, and SCADA
-                systems. We can simplify it as a combination of Mechatronic
-                systems that perform a specific task as per our requirements.
-                This course will help you to become an Automation Engineer by
-                learning the Mechatronic systems from scratch.
+                processes and machinery&apos;s in an industry to reduce or
+                improve a human work. It is achieved by closed loop control
+                systems and information technologies using Panel Components,
+                Sensors, Conveyors, Motors & Drives, Robot Arms, PLCs, HMIs, and
+                SCADA systems. We can simplify it as a combination of
+                Mechatronic systems that perform a specific task as per our
+                requirements. This course will help you to become an Automation
+                Engineer by learning the Mechatronic systems from scratch.
               </p>
             </div>
 
@@ -100,7 +100,7 @@ const Page = () => {
                 PLC maintenance engineer in Industrial Automation Panel
                 Builders, Automation Product dealers, or at manufacturing
                 industries. Also can become a PLC programmer or Automation
-                engineer in MNC's like Siemens, AB, ABB, Delta, Mitsubishi,
+                engineer in MNC&apos;s like Siemens, AB, ABB, Delta, Mitsubishi,
                 Schneider Electric, Fuji, Omron etc. Over a period of time with
                 good experience in PLC programming and Control Panel there is a
                 high chance to be a PLC programming freelancer or entrepreneur
