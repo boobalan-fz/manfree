@@ -20,6 +20,7 @@ import automationproduct from "@/assets/specializtions/automationproduct.svg";
 import corparate from "@/assets/specializtions/corparate.svg";
 import image from "@/assets/image.png";
 import Marquee from "@/components/homepage/Marquee";
+import Link from "next/link";
 
 const SpecialCardData = [
   {
@@ -65,36 +66,42 @@ const data = [
     title: "PLC Automation and Programming",
     description:
       "Streamline operations with expert PLC automation and programming.",
+    href: "/courses/plc",
     img: computer,
   },
   {
     title: "Embedded Systems Development",
     description:
       "Innovate and integrate with our advanced embedded systems training.",
+    href: "/courses/embedded",
     img: embeddedpic,
   },
   {
     title: "VFD and Servo Installation",
     description:
       "Optimize performance with precision VFD and servo installation.",
+    href: "/courses/vfd",
     img: robot,
   },
   {
     title: "Software Development",
     description:
       "Build the future with versatile software skills in Java, Python, and more.",
+    href: "/courses/software",
     img: servo,
   },
   {
     title: "Industrial Automation",
     description:
       "Drive efficiency and innovation through tailored automation solutions.",
+    href: "/courses/industrialAssociate",
     img: motor,
   },
   {
     title: "IoT (Internet of Things)",
     description:
       "IoT solutions for a connected world. Innovate with smart devices and data-driven insights.",
+    href: "/courses/iot",
     img: inventor,
   },
 ];
@@ -188,9 +195,12 @@ export default function Home() {
             <CourseCard data={item} key={index} />
           ))}
         </div>
-        <button className="text-[#FF9A53]  flex gap-2 items-center justify-end hover:underline  mt-2 w-full">
+        <Link
+          href={`/courses`}
+          className="text-[#FF9A53]  flex gap-2 items-center justify-end hover:underline  mt-2 w-full"
+        >
           View All <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
-        </button>
+        </Link>
       </div>
       <div className="max-w-[85rem] mx-auto py-5 px-10 md:px-10 lg:px-0 sm:px-0 ">
         <h1 className="text-5xl text-center font-semibold text-[#183D6D] mb-10">

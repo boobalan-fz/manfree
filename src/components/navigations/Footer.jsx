@@ -59,11 +59,11 @@ const Footer = () => {
             Our Courses
           </h1>
           <span className="flex flex-col items-start gap-7 font  ">
-            {courses.map((item, ind) => (
+            {courses.map((item, index) => (
               <Link
                 href={`/courses/${item}`}
                 className=" text-[#CECECE]"
-                key={ind}
+                key={index}
               >
                 {item}
               </Link>
@@ -76,7 +76,7 @@ const Footer = () => {
           </h1>
           <span className="flex flex-col items-start gap-7 font  ">
             {website.map((item, ind) => (
-              <Link href={item.route} className=" text-[#CECECE]" key={ind}>
+              <Link href={item?.route} className=" text-[#CECECE]" key={ind}>
                 {item.name}
               </Link>
             ))}
