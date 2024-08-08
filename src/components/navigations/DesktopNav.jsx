@@ -17,7 +17,7 @@ const DesktopNav = ({ navBar, setMobileMenuOpen, mobileMenuOpen }) => {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Delta Wing</span>
-            <div className="relative h-[77.83px] w-[106.37px]">
+            <div className="relative h-[77.83px] w-[200px]">
               <Image
                 src={manfree.src}
                 alt="delta"

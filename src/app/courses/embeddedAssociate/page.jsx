@@ -23,7 +23,7 @@ const Page = () => {
             {/* course description */}
             <div className="pt-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Course Description
               </h1>
@@ -45,7 +45,7 @@ const Page = () => {
             {/* what you will learn */}
             <div className="py-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 What you will learn
               </h1>
@@ -70,7 +70,7 @@ const Page = () => {
             {/* course content */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Course Content
               </h1>
@@ -85,7 +85,7 @@ const Page = () => {
             {/* job oppurtuintes */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Embedded Systems Job Opportunities
               </h1>
@@ -107,7 +107,7 @@ const Page = () => {
             {/* pre-requisite */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Pre-Requisite
               </h1>
@@ -123,7 +123,7 @@ const Page = () => {
             {/* who is this course*/}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Who is this course for ?
               </h1>
@@ -154,7 +154,7 @@ const Page = () => {
             {/* faq */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 FAQ related to this course
               </h1>

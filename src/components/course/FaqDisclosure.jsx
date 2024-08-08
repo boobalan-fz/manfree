@@ -13,7 +13,7 @@ export default function Example({ data }) {
         <Disclosure as="div" className="px-6 py-5" defaultOpen={false}>
           <DisclosureButton className="group flex w-full items-center text-left justify-between">
             <span
-              className={`text-[20px] font-semibold ${rubik.className} text-[#183D6D] w-[95%]`}
+              className={`text-[18px] font-semibold ${rubik.className} text-[#183D6D] w-[95%]`}
             >
               {data.question}
             </span>
