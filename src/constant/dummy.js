@@ -63,11 +63,32 @@ export const courses = [
     href: "/courses/plc",
   },
   {
-    title: "Embedded Systems Development",
+    title: "Arduino Programmer",
     description:
       "Innovate and integrate with our advanced embedded systems training.",
     img: embeddedpic,
-    href: "/courses/embedded",
+    href: "/courses/arduinoProgrammer",
+  },
+  {
+    title: "Embedded Engineer Professional",
+    description:
+      "Innovate and integrate with our advanced embedded systems training.",
+    img: embeddedpic,
+    href: "/courses/embeddedProfessional",
+  },
+  {
+    title: "Embedded Engineer Associate",
+    description:
+      "Innovate and integrate with our advanced embedded systems training.",
+    img: embeddedpic,
+    href: "/courses/embeddedAssociate",
+  },
+  {
+    title: "Embedded Programmer",
+    description:
+      "Innovate and integrate with our advanced embedded systems training.",
+    img: embeddedpic,
+    href: "/courses/embeddedProgrammer",
   },
   {
     title: "VFD and Servo Installation",
@@ -124,23 +145,6 @@ export const latest = [
   },
 ];
 
-export const wywlForIndustrialAutomation = [
-  "Deep knowledge about Panel board, Panel wiring, Panel board components working principles, Components Selection",
-  "Good PLC programming skills with more than 10 PLC brands like Siemens, Omron, AB, ABB, Schneider, Delta, Phoenix, Selec, Fuji, Mitsubishi etc.,",
-  "Advanced concepts like 16bit/32bit Arithmetic and Data handling instructions, Modbus, Ethernet, Profibus protocols, HMI programming with Animations, Report Generation, Macro and Recipe Programming",
-  "PLC hardware wiring, PLC & HMI interfacing using Rs232 & RS485 protocols, VFD programming, Interfacing PLC, HMI & VFD using different protocols",
-  "Developing an Automation project by using only HMI & VFD without using PLC, Servo and Stepper motor concepts",
-  "SCADA programming with Tag creations, Animations, Report generation, Controlling & monitoring PLC",
-];
-
-export const wywlForPlcProgrammer = [
-  "Good PLC programming skills with Delta & Siemens PLCs. Students can choose a PLC brand they wish to learn",
-  "Advanced concepts like 16bit/32bit Arithmetic and Data handling instructions, Modbus, Ethernet, Profibus protocols, HMI programming with Animations, Report Generation, Macro and Recipe Programming",
-  "PLC hardware wiring, PLC & HMI interfacing using Rs232 & RS485 protocols",
-  "Developing projects by using PLC & HMI",
-  "SCADA programming with Tag creations, Animations, Report generation, Controlling & monitoring PLC",
-];
-
 export const courseIncludes = [
   {
     title: "Hands on Training",
@@ -163,6 +167,61 @@ export const courseIncludes = [
     img: certificatecompletion,
   },
 ];
+
+// What you will learn for all courses
+
+export const wywlForIndustrialAutomation = [
+  "Deep knowledge about Panel board, Panel wiring, Panel board components working principles, Components Selection",
+  "Good PLC programming skills with more than 10 PLC brands like Siemens, Omron, AB, ABB, Schneider, Delta, Phoenix, Selec, Fuji, Mitsubishi etc.,",
+  "Advanced concepts like 16bit/32bit Arithmetic and Data handling instructions, Modbus, Ethernet, Profibus protocols, HMI programming with Animations, Report Generation, Macro and Recipe Programming",
+  "PLC hardware wiring, PLC & HMI interfacing using Rs232 & RS485 protocols, VFD programming, Interfacing PLC, HMI & VFD using different protocols",
+  "Developing an Automation project by using only HMI & VFD without using PLC, Servo and Stepper motor concepts",
+  "SCADA programming with Tag creations, Animations, Report generation, Controlling & monitoring PLC",
+];
+
+export const wywlForPlcProgrammer = [
+  "Good PLC programming skills with Delta & Siemens PLCs. Students can choose a PLC brand they wish to learn",
+  "Advanced concepts like 16bit/32bit Arithmetic and Data handling instructions, Modbus, Ethernet, Profibus protocols, HMI programming with Animations, Report Generation, Macro and Recipe Programming",
+  "PLC hardware wiring, PLC & HMI interfacing using Rs232 & RS485 protocols",
+  "Developing projects by using PLC & HMI",
+  "SCADA programming with Tag creations, Animations, Report generation, Controlling & monitoring PLC",
+];
+
+export const wywlForEmbeddedProfessional = [
+  "Deep knowledge of both hardware and software used in embedded systems",
+  "Proficiency in circuit designing and understanding of components used in circuits.",
+  "Ability to select perfect/suitable components for specific applications.",
+  "Proficiency in programming languages such as C (Embedded C), C++ (Embedded C++), or Python (Embedded Python).",
+  "Strong knowledge of PIC microcontrollers & STM32 controllers",
+  "Good understanding in protocols like UART, SPI, I2C, CAN, Flexray, LIN etc.,",
+];
+
+export const wywlForEmbeddedAssociate = [
+  "Deep knowledge of both hardware and software used in embedded systems",
+  "Proficiency in circuit designing and understanding of components used in circuits.",
+  "Ability to select perfect/suitable components for specific applications.",
+  "Proficiency in programming languages such as C & Embedded C",
+  "Strong knowledge of PIC microcontrollers",
+  "Good understanding in protocols like UART, SPI, I2C etc.,",
+];
+
+export const wywlForEmbeddedProgrammer = [
+  "Both hardware and software fundamentals used in embedded systems",
+  "Understanding basic electronic components, building and testing simple circuits",
+  "Programming languages such as C & Embedded C",
+  "Fundamental knowledge of PIC microcontrollers",
+  "Protocols like UART, SPI, I2C etc.,",
+];
+
+export const wywlForArduinoProgrammer = [
+  "Introduction to hardware and software, setting up the IDE, and writing your first sketch",
+  "Understanding basic electronic components, building and testing simple circuits",
+  "Proficiency in programming languages such as C  & Embedded",
+  "Interfacing with sensors and actuators, creating interactive projects.",
+  "Optimising code, using communication protocols, and developing IoT applications",
+];
+
+// Course content for all courses
 
 export const industrialProfessional = [
   {
@@ -821,6 +880,450 @@ export const plcProgrammer = [
       "Interfacing with PLC & Drives",
       "Working on projects",
     ],
+  },
+];
+
+export const embeddedProfessional = [
+  {
+    title: "Embedded Systems",
+    content: [
+      "Introduction",
+      "Microcontroller Architecture",
+      "Electrical and Electronics fundamentals",
+      "Input & Output devices",
+      "Project development process",
+      "Git & GitHub",
+    ],
+  },
+  {
+    title: "C Programming",
+    content: [
+      "Introduction",
+      "Data-types",
+      "Variables",
+      "Operators",
+      "Decision making",
+      "Looping statements",
+      "Functions",
+      "Arrays",
+    ],
+  },
+  {
+    title: "C Advanced",
+    content: [
+      "Strings",
+      "Pointers",
+      "Structure & Union",
+      "Memory management",
+      "Storage class",
+      "Typedef & Enum",
+      "File handling",
+      "Command line arguments",
+      "Compiler process",
+    ],
+  },
+  {
+    title: "C++ Programming",
+    content: [
+      "Introduction",
+      "Data types & Operators",
+      "Control & Looping statements",
+      "Functions, Arrays and String",
+      "Pointer, Structure & Union",
+      "Memory management & Storage class.",
+      "Introduction to OOPS",
+      "Class & Object",
+      "Inheritance & Polymorphism",
+      "Encapsulation & Abstraction.",
+    ],
+  },
+  {
+    title: "Python Programming",
+    content: [
+      "Introduction",
+      "Data types & Operators",
+      "Control & Looping statements",
+      "Functions, List, Tuple",
+      "Set, Dictionary & String",
+      "Class and Object",
+      "Inheritance & Polymorphism",
+      "Encapsulation & Abstraction.",
+    ],
+  },
+  {
+    title: "Electronics Hardware",
+    content: [
+      "Active & passive components",
+      "Transistors, IGBTs, MOSFET",
+      "Circuit designing & schematic",
+      "Power supply Circuit",
+      "Relay driver circuit",
+      "Components assembling",
+      "Soldering & Testing",
+      "555 Timer & Op-Amp circuits",
+      "Developing an own hardware board",
+    ],
+  },
+  {
+    title: "Sensors & Actuators",
+    content: [
+      "Input & output devices",
+      "PB, Toggle switch & keypad",
+      "Introduction to Sensors",
+      "Digital & Analog Sensors",
+      "Working principle & wiring details",
+      "Introduction to Motors & Types",
+      "Pneumatic & Hydraulics",
+      "Load Calculation & Circuit designing",
+      "Project Requirement Analysis",
+      "Microcontroller Selection",
+    ],
+  },
+  {
+    title: "Digital Electronics",
+    content: [
+      "Introduction to Logic Gates",
+      "Numbering System",
+      "Combinational Circuits",
+      "Sequential Circuits",
+      "Finite State Machine",
+      "Types Of Logic Signals",
+      "TTL & CMOS",
+    ],
+  },
+  {
+    title: "PIC Microcontroller",
+    content: [
+      "Introduction to Microcontroller",
+      "PIC Architecture & software IDE",
+      "Working with LED, Motor, Switches & PB",
+      "Interfacing different sensors",
+      "7 Segment display, LCD & Keypad",
+      "Interrupts & its types",
+      "Working with different Timers",
+      "ADC & EEPROM",
+      "Protocols- UART, I2C, SPI",
+      "GSM Module, Bluetooth, RFID etc.",
+      "RTC- Master Slave",
+      "PWM - Stepper & Servo Motor",
+      "Internet of Things (IoT)",
+      "Working on real time projects",
+    ],
+  },
+  {
+    title: "STM32 Microcontroller",
+    content: [
+      "STM32 Architecture & software IDE",
+      "GPIO - Inputs & Outputs",
+      "Interrupts & Timers",
+      "ADC & EEPROM",
+      "Protocols- UART, I2C, SPI",
+      "GSM Module, Bluetooth, RFID etc.",
+      "RTC- Master Slave",
+      "PWM - Stepper & Servo Motor",
+      "Internet of Things (IoT)",
+      "CAN, LIN, Flexray etc.",
+      "Working on real time projects",
+    ],
+  },
+];
+
+export const embeddedAssociate = [
+  {
+    title: "Embedded Systems",
+    content: [
+      "Introduction",
+      "Microcontroller Architecture",
+      "Electrical and Electronics fundamentals",
+      "Input & Output devices",
+      "Project development process",
+      "Git & GitHub",
+    ],
+  },
+  {
+    title: "C Programming",
+    content: [
+      "Introduction",
+      "Data-types",
+      "Variables",
+      "Operators",
+      "Decision making",
+      "Looping statements",
+      "Functions",
+      "Arrays",
+    ],
+  },
+  {
+    title: "C Advanced",
+    content: [
+      "Strings",
+      "Pointers",
+      "Structure & Union",
+      "Memory management",
+      "Storage class",
+      "Typedef & Enum",
+      "File handling",
+      "Command line arguments",
+      "Compiler process",
+    ],
+  },
+  {
+    title: "Electronics Hardware",
+    content: [
+      "Active & passive components",
+      "Transistors, IGBTs, MOSFET",
+      "Circuit designing & schematic",
+      "Power supply Circuit",
+      "Relay driver circuit",
+      "Components assembling",
+      "Soldering & Testing",
+      "555 Timer & Op-Amp circuits",
+      "Developing an own hardware board",
+    ],
+  },
+  {
+    title: "Sensors & Actuators",
+    content: [
+      "Input & output devices",
+      "PB, Toggle switch & keypad",
+      "Introduction to Sensors",
+      "Digital & Analog Sensors",
+      "Working principle & wiring details",
+      "Introduction to Motors & Types",
+      "Pneumatic & Hydraulics",
+      "Load Calculation & Circuit designing",
+      "Project Requirement Analysis",
+      "Microcontroller Selection",
+    ],
+  },
+  {
+    title: "Digital Electronics",
+    content: [
+      "Introduction to Logic Gates",
+      "Numbering System",
+      "Combinational Circuits",
+      "Sequential Circuits",
+      "Finite State Machine",
+      "Types Of Logic Signals",
+      "TTL & CMOS",
+    ],
+  },
+  {
+    title: "PIC Microcontroller",
+    content: [
+      "Introduction to Microcontroller",
+      "PIC Architecture & software IDE",
+      "Working with LED, Motor, Switches & PB",
+      "Interfacing different sensors",
+      "7 Segment display, LCD & Keypad",
+      "Interrupts & its types",
+      "Working with different Timers",
+      "ADC & EEPROM",
+      "Protocols- UART, I2C, SPI",
+      "GSM Module, Bluetooth, RFID etc.",
+      "RTC- Master Slave",
+      "PWM - Stepper & Servo Motor",
+      "Internet of Things (IoT)",
+      "Working on real time projects",
+    ],
+  },
+];
+
+export const arduinoProgrammer = [
+  {
+    title: "Arduino Basics",
+    content: [
+      "Introduction to Arduino hardware and software.",
+      "Setting up the Arduino Integrated Development Environment (IDE).",
+      "Writing and uploading your first Arduino sketch.",
+    ],
+  },
+  {
+    title: "Fundamentals of Electronics",
+    content: [
+      "Understanding basic electronic components (resistors, capacitors, transistors, etc.).",
+      "Learning to read and create simple circuit diagrams.",
+      "Building and testing circuits on a breadboard.",
+    ],
+  },
+  {
+    title: "Programming Essentials",
+    content: [
+      "Programming concepts in C/C++.",
+      "Variables, data types, and operators.",
+      "Control structures (if statements, loops).",
+      "Functions, Array, and String.",
+    ],
+  },
+  {
+    title: "Working with Sensors and Actuators",
+    content: [
+      "Interfacing with digital and analog sensors.",
+      "Controlling LEDs, motors, and other actuators.",
+      "Reading data from temperature, light, and motion sensors.",
+    ],
+  },
+  {
+    title: "Intermediate Projects",
+    content: [
+      "Creating interactive projects with multiple components.",
+      "Using libraries to simplify complex tasks.",
+      "Debugging and troubleshooting common issues.",
+    ],
+  },
+  {
+    title: "Communication Protocols",
+    content: [
+      "Understanding and using MQTT, I2C, SPI, and UART protocols.",
+      "Communicating between multiple Arduino boards.",
+      "Integrating Arduino with other devices (e.g., GPS modules, Bluetooth).",
+    ],
+  },
+  {
+    title: "Internet of Things (IoT)",
+    content: [
+      "Connecting Arduino to the IoT (ESP32).",
+      "Sending and receiving data from web services.",
+      "Building simple IoT applications.",
+    ],
+  },
+  {
+    title: "Advanced Topics",
+    content: [
+      "Optimizing code for performance and memory usage.",
+      "Power management techniques for battery-operated projects.",
+      "Advanced debugging strategies.",
+    ],
+  },
+  {
+    title: "Project Development",
+    content: [
+      "Designing and planning your own projects.",
+      "Best practices for project documentation.",
+      "Tips for presenting and sharing your work with the community.",
+    ],
+  },
+  {
+    title: "Final Capstone Project",
+    content: [
+      "Applying all the skills learned to create a comprehensive project.",
+      "Incorporating feedback and iterating on your design.",
+      "Preparing a final presentation of your project.",
+    ],
+  },
+];
+
+// FAQ for all courses
+
+export const faqEmbeddedProfessional = [
+  {
+    question: "How many months will it take to complete this course?",
+    answer:
+      "This course will be completed in 6 months (140 working days) if a student joins this course as a full-time regular student. Daily class timings are 10.00 am to 4.00 pm. Students can enroll in this course part-time too.",
+  },
+  {
+    question: "Will there be hands-on projects or assignments?",
+    answer:
+      "Yes, all courses include practical assignments and projects to reinforce theoretical knowledge and provide real-world experience. Nearly 90% of class is practical, and students will work on a minimum of 6 to 8 projects.",
+  },
+  {
+    question: "Is this course available part-time or on weekends?",
+    answer:
+      "Yes, we admit students part-time as well as on weekends. Students can choose morning, afternoon, or evening time slots, or on weekends based on their convenience or work shift timings. Customized course time is also available.",
+  },
+  {
+    question: "Will I get placement support for this course?",
+    answer:
+      "Yes, everyone will have 100% placement support until they get a job in a company. In the placement process, students will have tests, projects, mock interviews, group discussions, etc. Based on performance, companies will be referred. Our embedded students are regularly receiving job offers from companies in various fields, including automotive, biomedical, IoT, and R&D projects.",
+  },
+  {
+    question: "Do we provide free demo classes?",
+    answer:
+      "Yes, we provide free demo classes for all our courses. It's a great opportunity for you to experience our teaching style, interact with instructors, and get a preview of the course content before making a commitment. Feel free to reach out to us to schedule your demo class or for more details!",
+  },
+];
+
+export const faqEmbeddedAssociate = [
+  {
+    question: "How many months will it take to complete this course?",
+    answer:
+      "This course will be completed in 4 months (96 working days) if a student joins this course as a full-time regular student. Daily class timings are 10.00 am to 4.00 pm. Students can enroll in this course part-time too.",
+  },
+  {
+    question: "Will there be hands-on projects or assignments?",
+    answer:
+      "Yes, all courses include practical assignments and projects to reinforce theoretical knowledge and provide real-world experience. Nearly 90% of class is practical, and students will work on a minimum of 4 to 6 projects.",
+  },
+  {
+    question: "Is this course available part-time or on weekends?",
+    answer:
+      "Yes, we admit students part-time as well as on weekends. Students can choose morning, afternoon, or evening time slots, or on weekends based on their convenience or work shift timings. Customized course time is also available.",
+  },
+  {
+    question: "Will I get placement support for this course?",
+    answer:
+      "Yes, everyone will have 100% placement support until they get a job in a company. In the placement process, students will have tests, projects, mock interviews, group discussions, etc. Based on performance, companies will be referred. Our embedded students are regularly receiving job offers from companies in various fields, including automotive, biomedical, IoT, and R&D projects.",
+  },
+  {
+    question: "Do we provide free demo classes?",
+    answer:
+      "Yes, we provide free demo classes for all our courses. It's a great opportunity for you to experience our teaching style, interact with instructors, and get a preview of the course content before making a commitment. Feel free to reach out to us to schedule your demo class or for more details!",
+  },
+];
+
+export const faqEmbeddedProgrammer = [
+  {
+    question: "How many months will it take to complete this course?",
+    answer:
+      "This course will be completed in 2 months (45 working days) if a student joins this course as a full-time regular student. Daily class timings are 10.00 am to 4.00 pm. Students can enroll in this course part-time too.",
+  },
+  {
+    question: "Will there be hands-on projects or assignments?",
+    answer:
+      "Yes, all courses include practical assignments and projects to reinforce theoretical knowledge and provide real-world experience. Nearly 90% of class is practical, and students will work on a minimum of 4 to 6 projects.",
+  },
+  {
+    question: "Is this course available part-time or on weekends?",
+    answer:
+      "Yes, we admit students part-time as well as on weekends. Students can choose morning, afternoon, or evening time slots, or on weekends based on their convenience or work shift timings. Customized course time is also available.",
+  },
+  {
+    question: "Will I get placement support for this course?",
+    answer:
+      "This is a crash course where you will learn all the topics from basic to advanced in a short period. We recommend this course only for beginners where they learn the fundamentals of embedded systems. If you need placement assistance, please enroll in our professional or associate course where you will have a deep understanding of all the topics, which will help to crack interviews.",
+  },
+  {
+    question: "Do we provide free demo classes?",
+    answer:
+      "Yes, we provide free demo classes for all courses. It's a great opportunity for you to experience our teaching style, interact with instructors, and get a preview of the course content before making a commitment. Feel free to reach out to us to schedule your demo class or for more details!",
+  },
+];
+
+export const faqArduinoProgrammer = [
+  {
+    question: "How many months will it take to complete this course?",
+    answer:
+      "This course will be completed in 1 month (24 working days) if a student joins this course as a full-time regular student. Daily class timings are 10.00 am to 4.00 pm. Students can enroll in this course part-time too.",
+  },
+  {
+    question: "Is this course available part-time or on weekends?",
+    answer:
+      "Yes, we admit students part-time as well as on weekends. Students can choose morning, afternoon, or evening time slots, or on weekends based on their convenience or work shift timings. Customized course time is also available.",
+  },
+  {
+    question: "Can I use Arduino for professional projects?",
+    answer:
+      "Yes, Arduino is widely used in professional projects across industries such as robotics, IoT, automation, and prototyping. This course provides a solid foundation for applying Arduino in real-world applications.",
+  },
+  {
+    question: "What kind of projects will I work on?",
+    answer:
+      "You'll work on projects ranging from simple LED control to more complex tasks involving sensors, actuators, and communication protocols. Projects are designed to reinforce learning and practical application.",
+  },
+  {
+    question: "What can I expect to achieve by the end of the course?",
+    answer:
+      "By the end of the course, you'll have gained practical skills in Arduino programming, electronics, and project development. You'll be able to create and implement your own Arduino-based projects and prototypes.",
   },
 ];
 

@@ -1,7 +1,5 @@
-import Loading from "@/components/Loading";
+import LoadingState from "@/components/LoadingState";
 
-const loading = () => {
-  return <Loading />;
-};
-
-export default loading;
+export default function Loading() {
+  return <LoadingState />;
+}
