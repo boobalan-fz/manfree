@@ -56,6 +56,7 @@ export const SpecialCardData = [
 
 export const courses = [
   {
+    tag: "PLC",
     title: "PLC Automation and Programming",
     description:
       "Streamline operations with expert PLC automation and programming.",
@@ -63,6 +64,7 @@ export const courses = [
     href: "/courses/plc",
   },
   {
+    tag: "Embedded",
     title: "Arduino Programmer",
     description:
       "Innovate and integrate with our advanced embedded systems training.",
@@ -70,6 +72,7 @@ export const courses = [
     href: "/courses/arduinoProgrammer",
   },
   {
+    tag: "Embedded",
     title: "Embedded Engineer Professional",
     description:
       "Innovate and integrate with our advanced embedded systems training.",
@@ -77,6 +80,7 @@ export const courses = [
     href: "/courses/embeddedProfessional",
   },
   {
+    tag: "Embedded",
     title: "Embedded Engineer Associate",
     description:
       "Innovate and integrate with our advanced embedded systems training.",
@@ -84,6 +88,7 @@ export const courses = [
     href: "/courses/embeddedAssociate",
   },
   {
+    tag: "Embedded",
     title: "Embedded Programmer",
     description:
       "Innovate and integrate with our advanced embedded systems training.",
@@ -91,6 +96,7 @@ export const courses = [
     href: "/courses/embeddedProgrammer",
   },
   {
+    tag: "VFD",
     title: "VFD and Servo Installation",
     description:
       "Optimize performance with precision VFD and servo installation.",
@@ -98,6 +104,7 @@ export const courses = [
     href: "/courses/vfd",
   },
   {
+    tag: "Software",
     title: "Software Development",
     description:
       "Build the future with versatile software skills in Java, Python, and more.",
@@ -105,6 +112,7 @@ export const courses = [
     href: "/courses/software",
   },
   {
+    tag: "Automation",
     title: "Certified Industrial Automation Professional",
     description:
       "Drive efficiency and innovation through tailored automation solutions.",
@@ -112,6 +120,7 @@ export const courses = [
     href: "/courses/industrialProfessional",
   },
   {
+    tag: "Automation",
     title: "Certified Industrial Automation Associate",
     description:
       "Drive efficiency and innovation through tailored automation solutions.",
@@ -119,6 +128,7 @@ export const courses = [
     href: "/courses/industrialAssociate",
   },
   {
+    tag: "IoT",
     title: "IoT (Internet of Things)",
     description:
       "IoT solutions for a connected world. Innovate with smart devices and data-driven insights.",
@@ -176,7 +186,7 @@ export const wywlForIndustrialAutomation = [
   "Advanced concepts like 16bit/32bit Arithmetic and Data handling instructions, Modbus, Ethernet, Profibus protocols, HMI programming with Animations, Report Generation, Macro and Recipe Programming",
   "PLC hardware wiring, PLC & HMI interfacing using Rs232 & RS485 protocols, VFD programming, Interfacing PLC, HMI & VFD using different protocols",
   "Developing an Automation project by using only HMI & VFD without using PLC, Servo and Stepper motor concepts",
-  "SCADA programming with Tag creations, Animations, Report generation, Controlling & monitoring PLC",
+  "SCADA programming with Tag cr,eations, Animations, Report generation, Controlling & monitoring PLC",
 ];
 
 export const wywlForPlcProgrammer = [
@@ -184,7 +194,7 @@ export const wywlForPlcProgrammer = [
   "Advanced concepts like 16bit/32bit Arithmetic and Data handling instructions, Modbus, Ethernet, Profibus protocols, HMI programming with Animations, Report Generation, Macro and Recipe Programming",
   "PLC hardware wiring, PLC & HMI interfacing using Rs232 & RS485 protocols",
   "Developing projects by using PLC & HMI",
-  "SCADA programming with Tag creations, Animations, Report generation, Controlling & monitoring PLC",
+  "SCADA programming with Tag cr,eations, Animations, Report generation, Controlling & monitoring PLC",
 ];
 
 export const wywlForEmbeddedProfessional = [
@@ -269,7 +279,7 @@ export const industrialProfessional = [
     title: "PLC - Delta Basics",
     content: [
       "Introduction to PLC",
-      "Advantages and its applications",
+      "Advantages ,and its applications",
       "Delta PLC models",
       "Hardware Architecture",
       "Input & output wiring concepts",
@@ -416,7 +426,7 @@ export const industrialProfessional = [
       "Exploring different SCADA software",
       "Designing",
       "Basic Controls",
-      "Tag creation",
+      "Tag cr,eation",
       "Data read & write",
       "Animations & Graphs",
       "Image uploading",
@@ -573,7 +583,7 @@ export const industrialAssociate = [
     title: "PLC - Delta Basics",
     content: [
       "Introduction to PLC",
-      "Advantages and its applications",
+      "Advantages ,and its applications",
       "Delta PLC models",
       "Hardware Architecture",
       "Input & output wiring concepts",
@@ -720,7 +730,7 @@ export const industrialAssociate = [
       "Exploring different SCADA software",
       "Designing",
       "Basic Controls",
-      "Tag creation",
+      "Tag cr,eation",
       "Data read & write",
       "Animations & Graphs",
       "Image uploading",
@@ -759,7 +769,7 @@ export const plcProgrammer = [
     title: "PLC - Introduction",
     content: [
       "Introduction to PLC",
-      "Advantages and its applications",
+      "Advantages ,and its applications",
       "Delta PLC models",
       "Hardware Architecture",
       "Input & output wiring concepts",
@@ -873,7 +883,7 @@ export const plcProgrammer = [
       "Exploring different SCADA software",
       "Designing",
       "Basic Controls",
-      "Tag creation",
+      "Tag cr,eation",
       "Data read & write",
       "Animations & Graphs",
       "Image uploading",
