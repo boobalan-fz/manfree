@@ -1,7 +1,6 @@
 import "./globals.css";
-import Nav from "@/components/navigations/Nav";
-import Footer from "@/components/navigations/Footer";
 import { inter } from "./font";
+import Provider from "@/components/Provider";
 
 export const metadata = {
   title: "Manfree technologies",
@@ -15,9 +14,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/Manfree-Logo.svg" type="image/svg+xml" />
       </head>
       <body className={inter.className}>
-        <Nav />
-        {children}
-        <Footer />
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

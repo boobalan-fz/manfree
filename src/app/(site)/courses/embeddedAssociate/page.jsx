@@ -5,48 +5,55 @@ import Image from "next/image";
 import image from "@/assets/image.png";
 import tikicon from "@/assets/tick.svg";
 import {
-  faq,
-  WYWL,
   courseIncludes,
-  industrialProfessional,
-  industrialAssociate,
-  wywlForPlcProgrammer,
-  plcProgrammer,
-  faqPlc,
+  wywlForEmbeddedAssociate,
+  embeddedAssociate,
+  faqEmbeddedAssociate,
 } from "@/constant/dummy";
 import FaqDisclosure from "@/components/course/FaqDisclosure";
 import Disclosure from "@/components/course/Disclosure";
+import { useGetCourse } from "@/features/course/course.hooks";
 
 const Page = () => {
+  const { data } = useGetCourse("66b602a686bde535898fdc68");
+
   return (
     <div className="">
-      <CourseTitle title="Certified PLC programmer" />
+      <CourseTitle title="Certified Embedded Engineer Associate" />
       <div className=" max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-5 sm:px-20 px-4 sm:gap-20 ">
           <div className="py-4 sm:col-span-3">
             {/* course description */}
             <div className="pt-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Course Description
               </h1>
               <p
                 className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
               >
-                Not yet given
+                Embedded Systems combine hardware and software, featuring
+                electronic circuits with programmable chips like
+                microcontrollers or microprocessors, to control and monitor
+                applications. Using programming languages such as C, C++, and
+                Python, these systems are essential in devices like digital
+                watches, TVs, mobile phones, washing machines, microwaves,
+                security cameras, traffic controllers, ATMs, home automation,
+                E-vehicles, robotics, medical devices, IoT products, and
+                automotive ECUs.
               </p>
             </div>
 
             {/* what you will learn */}
             <div className="py-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 What you will learn
               </h1>
               <ul className="pt-4 flex flex-col gap-4 justify-center">
-                {wywlForPlcProgrammer.map((item, index) => (
+                {wywlForEmbeddedAssociate.map((item, index) => (
                   <li key={index} className="flex gap-2 items-start pr-10  ">
                     <Image
                       src={tikicon}
@@ -66,13 +73,13 @@ const Page = () => {
             {/* course content */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Course Content
               </h1>
 
               <ul className="flex  flex-col gap-4 pt-8">
-                {plcProgrammer.map((item, index) => (
+                {embeddedAssociate.map((item, index) => (
                   <Disclosure key={index} data={item} />
                 ))}
               </ul>
@@ -81,47 +88,45 @@ const Page = () => {
             {/* job oppurtuintes */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
-                PLC Programmer Job Opportunities
+                Embedded Systems Job Opportunities
               </h1>
               <p
                 className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
               >
-                Industrial Automation engineer or PLC programmer is a core
-                industry job which is always in high demand with growing
-                automation needs in industries. Students will end up with a
-                Control Panel Engineer, PLC programmer, Automation Engineer or a
-                PLC maintenance engineer in Industrial Automation Panel
-                Builders, Automation Product dealers, or at manufacturing
-                industries. Also can become a PLC programmer or Automation
-                engineer in MNC&apos;s like Siemens, AB, ABB, Delta, Mitsubishi,
-                Schneider Electric, Fuji, Omron etc. Over a period of time with
-                good experience in PLC programming and Control Panel there is a
-                high chance to be a PLC programming freelancer or entrepreneur
+                Embedded systems are a core industry field with high demand and
+                well-paid jobs. They play a crucial role in IoT, ML, AI, and
+                Robotics. Careers include Embedded Hardware Engineer, Embedded
+                Software Engineer, Robotics Engineer, Firmware Engineer, Systems
+                Engineer, and Product Design Engineer, with opportunities at
+                companies like Philips, Samsung, Siemens, Bosch, Continental,
+                Valeo, KPIT, Infosys, Google and Amazon. With experience, one
+                can also become a freelancer or entrepreneur in embedded
+                programming and product development.
               </p>
             </div>
 
             {/* pre-requisite */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Pre-Requisite
               </h1>
               <p
                 className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
               >
-                Should have good knowledge in Electrical and Electronics
-                concepts, Sensors, Drives & controls. Minimum experience in
-                Panel board wiring and designing is preferrable
+                Anyone who is looking for a good embedded job or interested in
+                business developing electronic products or embedded based
+                projects and services.
               </p>
             </div>
 
             {/* who is this course*/}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Who is this course for ?
               </h1>
@@ -129,23 +134,22 @@ const Page = () => {
                 className={`${poppins.className} text-[#797A84] list-disc ml-5 text-justify text-base pt-5 sm:pr-52 space-y-3 `}
               >
                 <li>
-                  Industrial Automation/PLC Job Seekers (ME/BE/Diploma passed
-                  out students & one who is working in Panel Board)
+                  School students (Who completes 10th or 12th grade and planning
+                  to join circuit branches in Polytechnic or Engineering
+                  colleges)
                 </li>
                 <li>
-                  Business Persons (to explore PLC & HMI programming in details
-                  and looking for PLC Panel or Project development)
+                  College students (ME/BE/Msc/ Bsc/Diploma. Circuit branches are
+                  more related)
                 </li>
                 <li>
-                  Working Professionals (Individuals working in electrical,
-                  mechanical, automation, or control engineering often pursue
-                  PLC courses to enhance their skills in industrial automation
-                  and process control. )
+                  Professionals (Working in PCB board assembly, PCB Testing,
+                  Production, Lab technician, Service engineers, Hobbyists and
+                  DIY Enthusiasts)
                 </li>
                 <li>
-                  Individuals with an interest in automation, robotics, and
-                  electronics may pursue PLC courses to expand their knowledge
-                  and work on personal or small-scale projects.
+                  Entrepreneurs (to explore Embedded hardware and programming in
+                  detail and looking for Project or Product development)
                 </li>
               </ul>
             </div>
@@ -153,13 +157,13 @@ const Page = () => {
             {/* faq */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 FAQ related to this course
               </h1>
 
               <ul className=" pt-8">
-                {faqPlc.map((item, index) => (
+                {faqEmbeddedAssociate.map((item, index) => (
                   <FaqDisclosure data={item} key={index} />
                 ))}
               </ul>

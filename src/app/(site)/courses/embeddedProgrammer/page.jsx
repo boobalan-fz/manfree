@@ -6,17 +6,21 @@ import image from "@/assets/image.png";
 import tikicon from "@/assets/tick.svg";
 import {
   courseIncludes,
-  wywlForEmbeddedProfessional,
-  embeddedProfessional,
-  faqEmbeddedProfessional,
+  wywlForEmbeddedAssociate,
+  embeddedAssociate,
+  faqEmbeddedProgrammer,
+  wywlForEmbeddedProgrammer,
 } from "@/constant/dummy";
 import FaqDisclosure from "@/components/course/FaqDisclosure";
 import Disclosure from "@/components/course/Disclosure";
+import { useGetCourse } from "@/features/course/course.hooks";
 
 const Page = () => {
+  const { data } = useGetCourse("66b602ba86bde535898fdc6a");
+
   return (
     <div className="">
-      <CourseTitle title="Certified Embedded Engineer Professional" />
+      <CourseTitle title="Certified Embedded Programmer" />
       <div className=" max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-5 sm:px-20 px-4 sm:gap-20 ">
           <div className="py-4 sm:col-span-3">
@@ -50,7 +54,7 @@ const Page = () => {
                 What you will learn
               </h1>
               <ul className="pt-4 flex flex-col gap-4 justify-center">
-                {wywlForEmbeddedProfessional.map((item, index) => (
+                {wywlForEmbeddedProgrammer.map((item, index) => (
                   <li key={index} className="flex gap-2 items-start pr-10  ">
                     <Image
                       src={tikicon}
@@ -76,7 +80,7 @@ const Page = () => {
               </h1>
 
               <ul className="flex  flex-col gap-4 pt-8">
-                {embeddedProfessional.map((item, index) => (
+                {embeddedAssociate.map((item, index) => (
                   <Disclosure key={index} data={item} />
                 ))}
               </ul>
@@ -140,11 +144,6 @@ const Page = () => {
                   more related)
                 </li>
                 <li>
-                  Embedded Job Seekers (ME/BE/Msc/ Bsc/Diploma passed out
-                  students & one who is working in non technical field looking
-                  for good embedded jobs).
-                </li>
-                <li>
                   Professionals (Working in PCB board assembly, PCB Testing,
                   Production, Lab technician, Service engineers, Hobbyists and
                   DIY Enthusiasts)
@@ -165,7 +164,7 @@ const Page = () => {
               </h1>
 
               <ul className=" pt-8">
-                {faqEmbeddedProfessional.map((item, index) => (
+                {faqEmbeddedProgrammer.map((item, index) => (
                   <FaqDisclosure data={item} key={index} />
                 ))}
               </ul>

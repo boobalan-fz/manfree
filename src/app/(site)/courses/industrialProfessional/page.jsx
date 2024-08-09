@@ -6,21 +6,20 @@ import image from "@/assets/image.png";
 import tikicon from "@/assets/tick.svg";
 import {
   courseIncludes,
-  wywlForEmbeddedAssociate,
-  embeddedAssociate,
-  faqEmbeddedProgrammer,
-  wywlForEmbeddedProgrammer,
-  wywlForArduinoProgrammer,
-  arduinoProgrammer,
-  faqArduinoProgrammer,
+  industrialProfessional,
+  wywlForIndustrialAutomation,
+  faqIndustrialProfessional,
 } from "@/constant/dummy";
 import FaqDisclosure from "@/components/course/FaqDisclosure";
 import Disclosure from "@/components/course/Disclosure";
+import { useGetCourse } from "@/features/course/course.hooks";
 
 const Page = () => {
+  const { data } = useGetCourse("66b6024186bde535898fdc60");
+
   return (
     <div className="">
-      <CourseTitle title="Certified Arduino Programmer" />
+      <CourseTitle title="Certified Industrial Automation Professional" />
       <div className=" max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-5 sm:px-20 px-4 sm:gap-20 ">
           <div className="py-4 sm:col-span-3">
@@ -34,14 +33,16 @@ const Page = () => {
               <p
                 className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
               >
-                Unlock the full potential of Arduino programming with this
-                comprehensive course designed for all skill levels. Starting
-                with the basics, you&apos;ll learn to write and upload code
-                using the Arduino IDE, understand the fundamentals of
-                electronics, and work with various sensors and actuators. The
-                course includes hands-on projects that will help you create
-                interactive and practical applications, from simple LED blinking
-                to complex IoT devices.
+                Industrial Automation is nothing but implementing the automation
+                in the industries for controlling and monitoring different
+                processes and machinery&apos;s in an industry to reduce or
+                improve a human work. It is achieved by closed loop control
+                systems and information technologies using Panel Components,
+                Sensors, Conveyors, Motors & Drives, Robot Arms, PLCs, HMIs, and
+                SCADA systems. We can simplify it as a combination of
+                Mechatronic systems that perform a specific task as per our
+                requirements. This course will help you to become an Automation
+                Engineer by learning the Mechatronic systems from scratch.
               </p>
             </div>
 
@@ -53,7 +54,7 @@ const Page = () => {
                 What you will learn
               </h1>
               <ul className="pt-4 flex flex-col gap-4 justify-center">
-                {wywlForArduinoProgrammer.map((item, index) => (
+                {wywlForIndustrialAutomation.map((item, index) => (
                   <li key={index} className="flex gap-2 items-start pr-10  ">
                     <Image
                       src={tikicon}
@@ -79,7 +80,7 @@ const Page = () => {
               </h1>
 
               <ul className="flex  flex-col gap-4 pt-8">
-                {arduinoProgrammer.map((item, index) => (
+                {industrialProfessional.map((item, index) => (
                   <Disclosure key={index} data={item} />
                 ))}
               </ul>
@@ -90,20 +91,22 @@ const Page = () => {
               <h1
                 className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
               >
-                Arduino Programmer Job Opportunities
+                Industrial Automation Job Opportunities
               </h1>
               <p
                 className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
               >
-                Embedded systems are a core industry field with high demand and
-                well-paid jobs. They play a crucial role in IoT, ML, AI, and
-                Robotics. Careers include Embedded Hardware Engineer, Embedded
-                Software Engineer, Robotics Engineer, Firmware Engineer, Systems
-                Engineer, and Product Design Engineer, with opportunities at
-                companies like Philips, Samsung, Siemens, Bosch, Continental,
-                Valeo, KPIT, Infosys, Google and Amazon. With experience, one
-                can also become a freelancer or entrepreneur in embedded
-                programming and product development.
+                Industrial Automation engineer or PLC programmer is a core
+                industry job which is always in high demand with growing
+                automation needs in industries. Students will end up with a
+                Control Panel Engineer, PLC programmer, Automation Engineer or a
+                PLC maintenance engineer in Industrial Automation Panel
+                Builders, Automation Product dealers, or at manufacturing
+                industries. Also can become a PLC programmer or Automation
+                engineer in MNC&apos;s like Siemens, AB, ABB, Delta, Mitsubishi,
+                Schneider Electric, Fuji, Omron etc. Over a period of time with
+                good experience in PLC programming and Control Panel there is a
+                high chance to be a PLC programming freelancer or entrepreneur
               </p>
             </div>
 
@@ -117,9 +120,9 @@ const Page = () => {
               <p
                 className={`${poppins.className} text-[#797A84] text-justify text-base pt-5`}
               >
-                Anyone who is interested in learning about electronics, embedded
-                systems, and IoT (Internet of Things), and want to work on
-                prototype or toy projects
+                Should have basic knowledge in Electrical and Electronics
+                concepts, any degree related to Electrical or experience in
+                panel wiring or electrical maintenance
               </p>
             </div>
 
@@ -133,25 +136,24 @@ const Page = () => {
               <ul
                 className={`${poppins.className} text-[#797A84] list-disc ml-5 text-justify text-base pt-5 sm:pr-52 space-y-3 `}
               >
-                <li>School students (from 8th grade & above)</li>
                 <li>
-                  College students (anyone who is willing to explore electronics
-                  & IoT)
+                  College students (ME/BE/Diploma. EEE, E&I, I&C, Mechanical,
+                  Robotics, Mechatronics and related branches)
                 </li>
                 <li>
-                  Hobbyists and DIY Enthusiasts (Those interested in creating
-                  their own electronic projects, from simple gadgets to more
-                  complex interactive systems.)
+                  Industrial Automation/PLC Job Seekers (ME/BE/Diploma passed
+                  out students & one who is working in non technical field
+                  looking for good industrial automation/ PLC jobs)
                 </li>
                 <li>
-                  Professionals (Engineers, technicians, teachers, instructors
-                  and developers seeking to expand their knowledge and skills in
-                  embedded systems, IoT, and prototyping)
+                  Business & working Professionals (to explore Industrial
+                  Automation hardware and programming in details and looking for
+                  PLC Panel or Project development)
                 </li>
                 <li>
-                  Entrepreneurs (Innovators and startup founders interested in
-                  prototyping and developing new electronic products and
-                  devices)
+                  Individuals with an interest in automation, robotics, and
+                  electronics may pursue PLC courses to expand their knowledge
+                  and work on personal or small-scale projects.
                 </li>
               </ul>
             </div>
@@ -165,7 +167,7 @@ const Page = () => {
               </h1>
 
               <ul className=" pt-8">
-                {faqArduinoProgrammer.map((item, index) => (
+                {faqIndustrialProfessional.map((item, index) => (
                   <FaqDisclosure data={item} key={index} />
                 ))}
               </ul>
