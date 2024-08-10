@@ -13,6 +13,7 @@ import {
 import FaqDisclosure from "@/components/course/FaqDisclosure";
 import Disclosure from "@/components/course/Disclosure";
 import { useGetCourse } from "@/features/course/course.hooks";
+import UpcomingBatchCard from "@/components/course/UpcomingBatchCard";
 
 const Page = () => {
   const { data } = useGetCourse("66b6024186bde535898fdc60");
@@ -172,6 +173,19 @@ const Page = () => {
                 ))}
               </ul>
             </div>
+            {data?.batches.length > 0 && (
+              <div>
+                <h1
+                  className={`${rubik.className} font-semibold text-4xl text-[#183D6D]`}
+                >
+                  Upcoming Batches
+                </h1>
+
+                {data?.batches.map((item, index) => (
+                  <UpcomingBatchCard data={item} key={index} />
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="w-full  pb-4 sm:pb-0 sm:col-span-2 flex justify-center items-start">
@@ -213,11 +227,6 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <button
-        className={`${rubik.className} fixed bottom-0 sm:hidden bg-[#183D6D] mt-2 text-[#FF9A53] rounded-lg text-center py-4 font-semibold w-full text-lg`}
-      >
-        Join Course
-      </button>
     </div>
   );
 };

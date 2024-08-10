@@ -1,5 +1,7 @@
 import connectMongoDB from "@/libs/mongodb";
+import Batch from "@/models/batch";
 import Course from "@/models/course";
+import mongoose from "mongoose";
 
 export const createCourse = async (data) => {
   await connectMongoDB();
@@ -20,9 +22,11 @@ export const updateCourseById = async (id, data) => {
 
 export const getCourseById = async (id) => {
   await connectMongoDB();
-  const getCourse = await Course.findOne({ _id: id }).populate("batches");
+  const batches = await Batch.find({ course: new mongoose.Types.ObjectId(id) });
+  const course = await Course.findOne({ _id: id });
+  const finalData = { course, batches };
 
-  return getCourse;
+  return finalData;
 };
 
 export const deleteCourseById = async (id) => {
