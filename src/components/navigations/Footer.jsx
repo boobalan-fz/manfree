@@ -1,16 +1,64 @@
 import Link from "next/link";
+import computer from "@/assets/computer.jpg";
+import embeddedpic from "@/assets/embeddedpic.jpg";
+import motor from "@/assets/motor.jpg";
 import facebook from "@/assets/fb.svg";
 import twitter from "@/assets/twitter.svg";
 import linkedin from "@/assets/linkedin.svg";
 import instagram from "@/assets/instagram.svg";
 import Image from "next/image";
+import footerBg from "@/assets/Footer.png";
 
 const Footer = () => {
   const courses = [
-    "Certified PLC Programmer",
-    "Certified Automation Engineer",
-    "Certified Embedded Engineer Associate",
-    "Certified Embedded Engineer Professional",
+    {
+      tag: "PLC",
+      title: "PLC Automation and Programming",
+      description:
+        "Streamline operations with expert PLC automation and programming.",
+      img: computer,
+      href: "/courses/plc",
+    },
+    {
+      tag: "Embedded",
+      title: "Arduino Programmer",
+      description:
+        "Innovate and integrate with our advanced embedded systems training.",
+      img: embeddedpic,
+      href: "/courses/arduinoProgrammer",
+    },
+    {
+      tag: "Embedded",
+      title: "Embedded Engineer Professional",
+      description:
+        "Innovate and integrate with our advanced embedded systems training.",
+      img: embeddedpic,
+      href: "/courses/embeddedProfessional",
+    },
+    {
+      tag: "Embedded",
+      title: "Embedded Engineer Associate",
+      description:
+        "Innovate and integrate with our advanced embedded systems training.",
+      img: embeddedpic,
+      href: "/courses/embeddedAssociate",
+    },
+    {
+      tag: "Embedded",
+      title: "Embedded Programmer",
+      description:
+        "Innovate and integrate with our advanced embedded systems training.",
+      img: embeddedpic,
+      href: "/courses/embeddedProgrammer",
+    },
+    {
+      tag: "Automation",
+      title: "Certified Industrial Automation Associate",
+      description:
+        "Drive efficiency and innovation through tailored automation solutions.",
+      img: motor,
+      href: "/courses/industrialAssociate",
+    },
   ];
 
   const website = [
@@ -52,8 +100,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full px-8 py-10 sm:px-16 sm:py-14 bg-[#001424]">
-      <div className="flex flex-col sm:flex-row w-full sm:justify-between gap-7  sm:items-start">
+    <footer
+      style={{
+        backgroundImage: `url(${footerBg.src})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="w-full px-8 py-10 sm:px-16 sm:py-14"
+    >
+      <div className="flex flex-col sm:flex-row w-full sm:justify-between gap-10 sm:gap-0  sm:items-start">
         <div>
           <h1 className="font-semibold text-[#FF9A53] pb-7 text-3xl">
             Our Courses
@@ -61,11 +117,11 @@ const Footer = () => {
           <span className="flex flex-col items-start gap-7 font  ">
             {courses.map((item, index) => (
               <Link
-                href={`/courses/${item}`}
-                className=" text-[#CECECE]"
+                href={`${item.href}`}
+                className=" text-[#797A84] text-xl"
                 key={index}
               >
-                {item}
+                {item.title}
               </Link>
             ))}
           </span>
@@ -76,7 +132,11 @@ const Footer = () => {
           </h1>
           <span className="flex flex-col items-start gap-7 font  ">
             {website.map((item, ind) => (
-              <Link href={item?.route} className=" text-[#CECECE]" key={ind}>
+              <Link
+                href={item?.route}
+                className=" text-[#797A84] text-xl"
+                key={ind}
+              >
                 {item.name}
               </Link>
             ))}
@@ -86,7 +146,7 @@ const Footer = () => {
           <h1 className="font-semibold text-[#FF9A53] pb-7 text-3xl">
             Contact us
           </h1>
-          <div className="flex flex-col gap-6  text-[#CECECE] ">
+          <div className="flex flex-col gap-6  text-[#797A84] text-xl">
             <span className=" ">
               12/2 R.V.M Complex, Avinashi Road,
               <br />
@@ -98,17 +158,22 @@ const Footer = () => {
             <a href="tel: +91-9944766990" className="">
               +91-9944766990
             </a>
-            <span className="flex gap-4 sm:gap-6 items-center justify-start">
-              {socials.map((item, ind) => (
-                <a
-                  target="_blank"
-                  href={`/${item.link}`}
-                  key={ind}
-                  className="max-h-7 max-w-7 text-[#FF9A53]"
-                >
-                  <Image src={item.img} alt="social " />
-                </a>
-              ))}
+            <span className="flex flex-col gap-4 sm:gap-6 ">
+              <h1 className="font-normal text-[#FF9A53]  text-xl">
+                Connect with us
+              </h1>
+              <div className="flex gap-5 items-center">
+                {socials.map((item, ind) => (
+                  <a
+                    target="_blank"
+                    href={`/${item.link}`}
+                    key={ind}
+                    className="max-h-9 max-w-9 text-[#FF9A53]"
+                  >
+                    <Image src={item.img} alt="social " />
+                  </a>
+                ))}
+              </div>
             </span>
           </div>
         </div>

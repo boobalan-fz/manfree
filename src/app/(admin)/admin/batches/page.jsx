@@ -1,6 +1,7 @@
 "use client";
 import { useDeleteBatch, useGetAllBatches } from "@/features/batch/batch.hooks";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const Page = () => {
   const { data } = useGetAllBatches();
@@ -10,9 +11,12 @@ const Page = () => {
     <div>
       <div className="flex justify-between">
         <h1 className="text-xl font-bold">Batches</h1>
-        <button className="px-3 py-2 bg-blue-500 text-white rounded-md font-medium text-base">
+        <Link
+          href={`/admin/batches/add`}
+          className="px-3 py-2 bg-blue-500 text-white rounded-md font-medium text-base"
+        >
           Add Batch
-        </button>
+        </Link>
       </div>
       <div className="mt-5">
         <table className="min-w-full divide-y divide-gray-300 rounded-md ">
@@ -67,10 +71,12 @@ const Page = () => {
                 <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                   {batch.location}
                 </td>
-                <td className="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-500">
-                  <PencilIcon className="h-5 w-5 text-blue-500" />
+                <td className="whitespace-nowrap px-3 py-4 text-sm font-medium text-gray-500 cursor-pointer">
+                  <Link href={`/admin/batches/${batch?._id}`}>
+                    <PencilIcon className="h-5 w-5 text-blue-500" />
+                  </Link>
                 </td>
-                <td className="whitespace-nowrap px-3 py-4  text-sm font-medium text-gray-500 sm:pr-6 lg:pr-8">
+                <td className="whitespace-nowrap px-3 py-4  text-sm font-medium text-gray-500 sm:pr-6 lg:pr-8 cursor-pointer">
                   <TrashIcon
                     className="h-5 w-5 text-red-500"
                     onClick={() => mutate(batch?._id)}

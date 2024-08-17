@@ -47,10 +47,10 @@ export const useDeleteCourse = () => {
   });
 };
 
-export const useUpdateCourse = (id) => {
+export const useUpdateCourse = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: updateCourse(id),
+    mutationFn: updateCourse,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["courses"],

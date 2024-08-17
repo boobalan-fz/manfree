@@ -40,7 +40,7 @@ export default function AddCourseModal({ isOpen, close, courseId }) {
           <div className="flex min-h-full items-center justify-center p-4">
             <DialogPanel
               transition
-              className="w-full max-w-md rounded-xl bg-black/80   p-6  duration-300 ease-out"
+              className="w-full max-w-md rounded-xl bg-slate-100   p-6  duration-300 ease-out"
             >
               <DialogTitle
                 as="h3"

@@ -4,11 +4,8 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const AboutUs = () => {
   return (
-    <div className="mx-16">
-      <div className=" py-20  px-10 md:px-10 lg:px-0 sm:px-0">
-        <h1 className="text-5xl  font-semibold text-[#183D6D] mb-10">
-          About us
-        </h1>
+    <div>
+      <div className=" py-20  px-10 md:px-10 lg:px-20 sm:px-0">
         <div className="flex items-center  gap-10 ">
           <Image
             src={aboutUsImg}
@@ -18,7 +15,7 @@ const AboutUs = () => {
             height={700}
           />
           <div className="flex flex-col gap-5 items-start">
-            <p className="text-base">
+            <p className="text-xl">
               Manfree Technologies is a leading technical training institute
               offering courses on Industrial Automation Solutions, Embedded
               controllers, Raspberry PI, and Software Applications. We have
@@ -34,10 +31,6 @@ const AboutUs = () => {
               requirements and Software application developments in various
               platforms like Java, React, Python, Node Js, Android, PHP, etc.
             </p>
-
-            <button className="text-[#FF9A53] flex gap-2 items-center hover:underline">
-              View Events <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
-            </button>
           </div>
         </div>
       </div>

@@ -1,5 +1,11 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { createBatch, deleteBatch, getAllBatches, getBatch } from "./batch.api";
+import {
+  createBatch,
+  deleteBatch,
+  getAllBatches,
+  getBatch,
+  updateBatch,
+} from "./batch.api";
 
 export const useGetAllBatches = () =>
   useQuery({
@@ -32,6 +38,19 @@ export const useDeleteBatch = () => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: deleteBatch,
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["batches"],
+        refetchType: "active",
+      });
+    },
+  });
+};
+
+export const useUpdateBatch = () => {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: updateBatch,
     onSuccess: () => {
       queryClient.invalidateQueries({
         queryKey: ["batches"],

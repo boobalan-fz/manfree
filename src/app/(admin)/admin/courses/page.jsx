@@ -1,41 +1,25 @@
 "use client";
-import AddCourseModal from "@/components/adminUI/AddCourseModal";
 import {
   useDeleteCourse,
   useGetAllCourses,
 } from "@/features/course/course.hooks";
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import Link from "next/link";
 
 const Page = () => {
   const { data } = useGetAllCourses();
   const { mutate } = useDeleteCourse();
-  let [isOpen, setIsOpen] = useState(false);
-  const [courseId, setCourseId] = useState(null);
-
-  function open() {
-    setIsOpen(true);
-  }
-
-  function close() {
-    setIsOpen(false);
-  }
-
-  const handleEdit = (id) => {
-    setCourseId(id);
-    open();
-  };
 
   return (
     <div>
       <div className="flex justify-between">
         <h1 className="text-xl font-bold">Courses</h1>
-        <button
-          onClick={open}
+        <Link
+          href={`/admin/courses/add`}
           className="px-3 py-2 bg-blue-500 text-white rounded-md font-medium text-base"
         >
           Add Course
-        </button>
+        </Link>
       </div>
       <div className="mt-5 flex flex-col gap-4">
         {data?.map((item, index) => (
@@ -45,10 +29,9 @@ const Page = () => {
           >
             <div className="capitalize">{item.name}</div>
             <div className="flex gap-5 items-center">
-              <PencilIcon
-                className="h-5 w-5 text-blue-600"
-                onClick={() => handleEdit(item?._id)}
-              />
+              <Link href={`/admin/courses/${item?._id}`}>
+                <PencilIcon className="h-5 w-5 text-blue-600" />
+              </Link>
               <TrashIcon
                 className="h-5 w-5 text-red-600"
                 onClick={() => mutate(item?._id)}
@@ -57,7 +40,6 @@ const Page = () => {
           </div>
         ))}
       </div>
-      <AddCourseModal isOpen={isOpen} close={close} courseId={courseId} />
     </div>
   );
 };
