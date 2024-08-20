@@ -1,12 +1,12 @@
 import { rubik } from "@/app/font";
-import PageHeadBanner from "@/components/aboutPage/PageHeadBanner";
 import ContactForm from "@/components/contactUs/ContactForm";
 import ContactInfo from "@/components/contactUs/ContactInfo";
+import CourseTitle from "@/components/course/CourseTitle";
 
 const page = () => {
   return (
     <div>
-      <PageHeadBanner title={"Contact Us    "} />
+      <CourseTitle title={"Contact Us"} />
       <div className=" grid sm:grid-cols-2 grid-cols-1 sm:px-32 px-10 py-20">
         <ContactInfo />
         <ContactForm />

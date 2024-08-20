@@ -20,7 +20,7 @@ const Page = () => {
 
   return (
     <div className="">
-      <CourseTitle title="Certified Industrial Automation Professional" />
+      <CourseTitle title="Certified Industrial Automation Professional" data />
       <div className=" max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-5 sm:px-20 px-4 sm:gap-20 ">
           <div className="py-4 sm:col-span-3">
@@ -181,9 +181,11 @@ const Page = () => {
                   Upcoming Batches
                 </h1>
 
-                {data?.batches.map((item, index) => (
-                  <UpcomingBatchCard data={item} key={index} />
-                ))}
+                <div className="grid grid-cols-2 gap-5">
+                  {data?.batches.map((item, index) => (
+                    <UpcomingBatchCard data={item} key={index} />
+                  ))}
+                </div>
               </div>
             )}
           </div>

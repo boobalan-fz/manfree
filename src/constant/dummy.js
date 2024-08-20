@@ -62,6 +62,8 @@ export const courses = [
       "Streamline operations with expert PLC automation and programming.",
     img: computer,
     href: "/courses/plc",
+    tag: "embedded",
+    populare: true,
   },
   {
     tag: "Embedded",
@@ -69,7 +71,9 @@ export const courses = [
     description:
       "Innovate and integrate with our advanced embedded systems training.",
     img: embeddedpic,
+    tag: "embedded",
     href: "/courses/arduinoProgrammer",
+    populare: true,
   },
   {
     tag: "Embedded",
@@ -77,7 +81,9 @@ export const courses = [
     description:
       "Innovate and integrate with our advanced embedded systems training.",
     img: embeddedpic,
+    tag: "embedded",
     href: "/courses/embeddedProfessional",
+    populare: true,
   },
   {
     tag: "Embedded",
@@ -85,6 +91,7 @@ export const courses = [
     description:
       "Innovate and integrate with our advanced embedded systems training.",
     img: embeddedpic,
+    tag: "embedded",
     href: "/courses/embeddedAssociate",
   },
   {
@@ -93,6 +100,7 @@ export const courses = [
     description:
       "Innovate and integrate with our advanced embedded systems training.",
     img: embeddedpic,
+    tag: "embedded",
     href: "/courses/embeddedProgrammer",
   },
   {
@@ -101,6 +109,7 @@ export const courses = [
     description:
       "Optimize performance with precision VFD and servo installation.",
     img: robot,
+    tag: "industrial",
     href: "/courses/vfd",
   },
   {
@@ -109,6 +118,7 @@ export const courses = [
     description:
       "Build the future with versatile software skills in Java, Python, and more.",
     img: servo,
+    tag: "software",
     href: "/courses/software",
   },
   {
@@ -117,6 +127,7 @@ export const courses = [
     description:
       "Drive efficiency and innovation through tailored automation solutions.",
     img: motor,
+    tag: "industrial",
     href: "/courses/industrialProfessional",
   },
   {
@@ -125,6 +136,7 @@ export const courses = [
     description:
       "Drive efficiency and innovation through tailored automation solutions.",
     img: motor,
+    tag: "industrial",
     href: "/courses/industrialAssociate",
   },
   {
@@ -133,6 +145,7 @@ export const courses = [
     description:
       "IoT solutions for a connected world. Innovate with smart devices and data-driven insights.",
     img: inventor,
+    tag: "embedded",
     href: "/courses/iot",
   },
 ];
@@ -1436,5 +1449,50 @@ export const faqPlc = [
       "What shall I do if I need technical support after getting placed in a company?",
     answer:
       "Manfree is always happy to support our students at any time. You can contact us for any technical support. Even our alumni students are working in companies like Siemens, Delta, AB also happy to support our students",
+  },
+];
+
+//about us page
+
+export const successStories = [
+  {
+    designation: "Product Development Head at Innovations",
+    name: "Name",
+    content:
+      "“Manfree Technologies played a crucial role in our latest product development. Their team provided exceptional embedded systems solutions, from initial concept to final deployment. The project's success is a testament to their technical proficiency and commitment to delivering high-quality results. We look forward to future collaborations with them”",
+  },
+  {
+    designation: "Product Development Head at Innovations",
+    name: "Name",
+    content:
+      "“Manfree Technologies played a crucial role in our latest product development. Their team provided exceptional embedded systems solutions, from initial concept to final deployment. The project's success is a testament to their technical proficiency and commitment to delivering high-quality results. We look forward to future collaborations with them”",
+  },
+];
+
+export const coreValue = [
+  {
+    title: "Innovation",
+    content:
+      "At Manfree Technologies, we foster a culture of innovation, constantly seeking new and creative solutions to meet the evolving needs of our clients and the industry.",
+  },
+  {
+    title: "Integrity",
+    content:
+      "We uphold the highest standards of integrity in all our actions. Honesty, transparency, and ethical behavior are the foundations of our business.",
+  },
+  {
+    title: "Excellence",
+    content:
+      "We strive for excellence in everything we do, delivering top-notch training and solutions that exceed expectations and set new benchmarks in quality.",
+  },
+  {
+    title: "Collaboration",
+    content:
+      "Collaboration is key to our success. We work closely with clients, partners, and each other to achieve common goals and drive shared success.",
+  },
+  {
+    title: "Customer Focus",
+    content:
+      "Our clients are at the heart of everything we do. We are dedicated to understanding their needs and providing tailored solutions that drive their success.",
   },
 ];

@@ -36,15 +36,17 @@ const WhyUsAbout = () => {
       className="mt-10 p-20 bg-[#EFF5FF]"
     >
       <div className="text-center">
-        <h1 className={`font-normal text-xl text-primary ${poppins.className}`}>
+        <h1
+          className={`font-semibold text-xl text-[#FF9A53] ${poppins.className}`}
+        >
           Why Us
         </h1>
         <p className={`text-3xl font-semibold ${rubik.className} mt-5`}>
           Delivering Quality, Affordable, and Engaging Learning Experiences
         </p>
       </div>
-      <div className="mt-10 grid grid-cols-2 justify-items-center">
-        <div className={`text-textColor ${poppins.className}`}>
+      <div className="mt-10 max-w-screen-2xl mx-auto grid grid-cols-2 ">
+        <div className={`text-textColor text-xl ${poppins.className}`}>
           <h1>
             In Manfree, air16573 we create high quality, affordable,
             interactive, and accessible learning experience.
@@ -62,7 +64,7 @@ const WhyUsAbout = () => {
           {whyUs.map((item, index) => (
             <div
               key={index}
-              className="flex  items-center  gap-5 bg-white rounded-lg pr-10"
+              className="flex  items-center  gap-5 bg-white rounded-lg pr-10 border border-primary"
             >
               <div className="bg-primary p-4 rounded-lg">
                 <Image src={item.icon} />

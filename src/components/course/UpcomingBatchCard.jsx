@@ -9,7 +9,7 @@ import {
 const UpcomingBatchCard = ({ data }) => {
   return (
     <div className="relative">
-      <div className="px-4 capitalize  border border-[#0C7D81] rounded-full text-[#0C7D81] text-[20px] font-normal absolute right-3 top-3">
+      <div className="px-4 capitalize  border border-[#0C7D81] rounded-full text-[#0C7D81] text-[20px] font-normal absolute right-3 top-8">
         {data?.mode}
       </div>
       <div className="mt-5 bg-[#E2EFE4] pr-5 pl-10 pb-5 pt-10 rounded-3xl grid grid-cols-2 gap-5 ">

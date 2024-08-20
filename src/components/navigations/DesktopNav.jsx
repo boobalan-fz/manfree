@@ -41,7 +41,7 @@ const DesktopNav = ({ navBar, setMobileMenuOpen, mobileMenuOpen }) => {
           {navBar.map((item, index) => (
             <Link
               className={`relative text-sm font-medium  ${
-                path == item.href ? "text-[#FE9601] " : "text-white"
+                path == item.href ? "text-[#FF9A53] " : "text-white"
               } leading-6  pl-3`}
               href={item.href}
               key={index}

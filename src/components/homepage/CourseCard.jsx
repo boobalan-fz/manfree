@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const CourseCard = ({ data }) => {
   return (
-    <div className="  rounded-md bg-white drop-shadow-xl ">
+    <div className="  rounded-md bg-white drop-shadow-xl hover:scale-105 hover:delay-75 hover:duration-500">
       <Link href={data?.href} className="h-full flex flex-col ">
         <div className=" rounded-md shadow-sm ">
           <Image
@@ -14,7 +14,7 @@ const CourseCard = ({ data }) => {
           />
         </div>
         <div className="px-6 py-5 flex flex-col gap-3  rounded-b-md">
-          <span className="text-base self-start font-medium py-1 px-[11.5px] rounded-md   text-black border border-[#183D6D]  ">
+          <span className="text-base capitalize self-start font-medium py-1 px-[11.5px] rounded-md   text-black border border-[#183D6D]  ">
             {data.tag}
           </span>
           <div>

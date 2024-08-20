@@ -8,7 +8,7 @@ import inventor from "@/assets/inventor.jpg";
 import CourseCard from "@/components/homepage/CourseCard";
 import LatestBlog from "@/components/homepage/LatestBlog";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-import { roboto_flex, rubik } from "@/app/font";
+import { poppins, roboto_flex, rubik } from "@/app/font";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import AboutUs from "@/components/homepage/AboutUs";
 import HomeBanner from "@/components/homepage/HomeBanner";
@@ -21,6 +21,8 @@ import corparate from "@/assets/specializtions/corparate.svg";
 import image from "@/assets/image.png";
 import Marquee from "@/components/homepage/Marquee";
 import Link from "next/link";
+import { courses } from "@/constant/dummy";
+import UpcomingEvents from "@/components/homepage/UpcomingEvents";
 
 const SpecialCardData = [
   {
@@ -129,12 +131,17 @@ export default function Home() {
     <div>
       <HomeBanner />
       <AboutUs />
-      <div
-        className={`${roboto_flex.className} bg-[#F5F9FB] px-8 py-10 sm:px-16 sm:py-14`}
-      >
-        <h1 className=" text-4xl text-center  sm:text-5xl font-semibold  text-[#183D6D]">
+      <div className={` bg-[#F5F9FB] px-8 py-10 sm:px-20 sm:py-14`}>
+        <h1
+          className={`${rubik.className} font-semibold text-xl text-center  sm:text-2xl   text-[#FF9A53]`}
+        >
           Specializations
         </h1>
+        <p
+          className={`${rubik.className} font-semibold text-3xl text-center  sm:text-4xl   text-primary mt-3`}
+        >
+          Master Your Future with Expert Training
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-8 pt-12 ">
           {SpecialCardData.map((data, index) => (
             <SpecialCard
@@ -146,31 +153,56 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div
-        style={{
-          background:
-            "radial-gradient(82.09% 54.73% at 40.22% 49.46%, #0D3E64 10.7%, #0B365F 21.02%, #041048 72.79%, #01013F 100%)",
-        }}
-        className="px-8 py-4 sm:px-16 sm:py-12  grid grid-cols-2 gap-8"
-      >
+      <div className=" py-5 px-10 md:px-10 lg:px-20 sm:px-0">
+        <h1
+          className={`${rubik.className}  text-2xl text-center font-semibold text-secondary`}
+        >
+          Popular courses
+        </h1>
+        <p
+          className={`${rubik.className} text-4xl text-center font-semibold text-primary mt-3`}
+        >
+          Unlock Your Potential with Our Top Courses
+        </p>
+        <div className="grid sm:grid-cols-3 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 pt-12">
+          {courses
+            ?.filter((item) => item?.populare === true)
+            .map((item, index) => (
+              <CourseCard data={item} key={index} />
+            ))}
+        </div>
+        <Link
+          href={`/courses`}
+          className="text-[#FF9A53]  flex gap-2 items-center justify-end hover:underline  mt-2 w-full"
+        >
+          View All <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
+        </Link>
+      </div>
+      <div className="px-8 py-4 sm:px-20 sm:py-12  grid grid-cols-2 gap-8">
         <div>
-          <h1 className={`${rubik.className} text-white font-medium text-5xl `}>
+          <h1
+            className={`${rubik.className} text-secondary font-semibold text-2xl `}
+          >
             Recent Works
           </h1>
-          <div className={`${roboto_flex.className} pt-6`}>
-            <p className="text-white leading-6 text-sm font-light tracking-wide">
-              At Manfree Technologies, we excel in industrial automation with
-              advanced PLC programming and VFD installations. We lead in
-              embedded systems using PIC, ARM, and Arduino, and create IoT
-              solutions with Raspberry Pi. Our software development spans Java,
-              Python, React, and Node.js. We offer dynamic Raspberry Pi
-              projects, precise PLC programming, efficient VFD installations,
-              and custom PCB designs. Additionally, we provide corporate
-              training and develop innovative, future-ready products.
+          <p
+            className={`${rubik.className} text-primary font-semibold text-4xl mt-3`}
+          >
+            Showcasing Our Latest Achievements
+          </p>
+          <div className={`${poppins.className} pt-6`}>
+            <p className="text-textColor  text-xl font-normal">
+              In addition to training, we specialize in projects for Industrial
+              Automation and Embedded Systems. Our portfolio includes Automation
+              Panel Boards, PLC programming, Embedded solutions, and IoT
+              applications tailored to meet diverse client needs. We have
+              successfully developed products from inception to implementation,
+              including feature enhancements. Here are some highlights of our
+              successful projects and product developments.
             </p>
 
-            <button className="pt-4 flex  text-[#FF9A53] text-sm items-center justify-center">
-              View All <ArrowRightIcon className="w-4 h-4" />
+            <button className="pt-4 flex gap-4  text-secondary text-xl items-center ">
+              View All <ArrowLongRightIcon className="w-7 h-7" />
             </button>
           </div>
           <div className="grid grid-cols-2  gap-10 pt-8 w-full h-52">
@@ -186,21 +218,8 @@ export default function Home() {
           <Image src={image} alt="success" />
         </div>
       </div>
-      <div className="mx-16 py-5 px-10 md:px-10 lg:px-0 sm:px-0">
-        <h1 className="text-5xl text-center font-semibold text-[#183D6D] mb-10">
-          Popular courses
-        </h1>
-        <div className="grid sm:grid-cols-3 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 ">
-          {data?.map((item, index) => (
-            <CourseCard data={item} key={index} />
-          ))}
-        </div>
-        <Link
-          href={`/courses`}
-          className="text-[#FF9A53]  flex gap-2 items-center justify-end hover:underline  mt-2 w-full"
-        >
-          View All <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
-        </Link>
+      <div>
+        <UpcomingEvents />
       </div>
       <div className="mx-16 py-5 px-10 md:px-10 lg:px-0 sm:px-0 ">
         <h1 className="text-5xl text-center font-semibold text-[#183D6D] mb-10">
