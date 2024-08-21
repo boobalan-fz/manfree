@@ -5,11 +5,16 @@ import robot from "@/assets/robot.jpg";
 import servo from "@/assets/servo.jpg";
 import motor from "@/assets/motor.jpg";
 import inventor from "@/assets/inventor.jpg";
+import review from "@/assets/reviewBg.png";
+import trail from "@/assets/freeTrial.png";
 import CourseCard from "@/components/homepage/CourseCard";
 import LatestBlog from "@/components/homepage/LatestBlog";
-import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
-import { poppins, roboto_flex, rubik } from "@/app/font";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowLongRightIcon,
+  ChevronDoubleRightIcon,
+} from "@heroicons/react/24/outline";
+import { poppins, rubik } from "@/app/font";
+import blog from "@/assets/blogs.png";
 import AboutUs from "@/components/homepage/AboutUs";
 import HomeBanner from "@/components/homepage/HomeBanner";
 import SpecialCard from "@/components/homepage/SpecialCard";
@@ -23,6 +28,9 @@ import Marquee from "@/components/homepage/Marquee";
 import Link from "next/link";
 import { courses } from "@/constant/dummy";
 import UpcomingEvents from "@/components/homepage/UpcomingEvents";
+import ReviewCard from "@/components/homepage/ReviewCard";
+import SkillToNextLevel from "@/components/homepage/SkillToNextLevel";
+import UpcomingBatches from "@/components/homepage/UpcomingBatches";
 
 const SpecialCardData = [
   {
@@ -153,7 +161,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className=" py-5 px-10 md:px-10 lg:px-20 sm:px-0">
+      <div className=" p-20">
         <h1
           className={`${rubik.className}  text-2xl text-center font-semibold text-secondary`}
         >
@@ -178,6 +186,12 @@ export default function Home() {
           View All <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
         </Link>
       </div>
+      {/* Skill to next level */}
+
+      <div>
+        <SkillToNextLevel />
+      </div>
+
       <div className="px-8 py-4 sm:px-20 sm:py-12  grid grid-cols-2 gap-8">
         <div>
           <h1
@@ -218,31 +232,95 @@ export default function Home() {
           <Image src={image} alt="success" />
         </div>
       </div>
-      <div>
-        <UpcomingEvents />
-      </div>
-      <div className="mx-16 py-5 px-10 md:px-10 lg:px-0 sm:px-0 ">
-        <h1 className="text-5xl text-center font-semibold text-[#183D6D] mb-10">
-          Latest from our blogs
-        </h1>
-        <p className="text-center font-normal text-base mx-auto max-w-6xl">
-          Explore our latest blog posts at Manfree Technologies covering
-          cutting-edge topics in industrial automation, IoT innovations with
-          Raspberry Pi, and the power of Python in data analysis and automation.
-          Stay informed with practical insights and real-world applications to
-          stay ahead in technology.
-        </p>
-        <div className="grid sm:grid-cols-3 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-7">
+      <div
+        style={{
+          backgroundImage: `url(${blog.src})`,
+        }}
+        className=" p-20 bg-[#EFF5FF]"
+      >
+        <div className="text-center">
+          <h1
+            className={`${rubik.className} text-2xl font-semibold text-secondary`}
+          >
+            Latest from our blogs
+          </h1>
+          <h1
+            className={`${rubik.className} text-4xl  font-semibold text-primary mt-3`}
+          >
+            Stay Informed with Our Latest Insights
+          </h1>
+        </div>
+
+        <div className="grid sm:grid-cols-3 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 mt-10">
           {latest?.map((item, index) => (
             <LatestBlog data={item} key={index} />
           ))}
         </div>
       </div>
-      <div className="py-5 px-10 md:px-10 lg:px-0 sm:px-0">
+      <div>
+        <UpcomingBatches />
+      </div>
+      <div>
+        <UpcomingEvents />
+      </div>
+      <div className="py-20">
         <h1 className=" text-4xl text-center  sm:text-5xl font-semibold  text-[#183D6D] ">
           Our Students Work In
         </h1>
         <Marquee />
+      </div>
+      <div
+        style={{
+          backgroundImage: `url(${review.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "contain",
+        }}
+        className="px-20 pb-20"
+      >
+        <div className={`text-center`}>
+          <h1
+            className={`${rubik.className} font-semibold text-secondary text-2xl`}
+          >
+            Reviews
+          </h1>
+          <p
+            className={`mt-3 ${rubik.className} text-4xl font-semibold text-primary`}
+          >
+            See What Our Learners Are Saying
+          </p>
+        </div>
+        <div className="grid grid-cols-3 gap-10 mt-10">
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+          <ReviewCard />
+        </div>
+      </div>
+      <div className="px-20 py-10 grid grid-cols-2 gap-10 ">
+        <Image src={trail} />
+        <div className="self-center flex flex-col gap-10">
+          <h1
+            className={`${rubik.className} font-semibold text-6xl text-primary`}
+          >
+            Free Trial Class Available
+          </h1>
+          <p
+            className={`${poppins.className} font-normal text-2xl text-textColor`}
+          >
+            Innovative courses and expert guidance. Gain practical skills for
+            high-demand fields. Our experienced instructors ensure comprehensive
+            learning. Join us and advance your career with confidence.
+          </p>
+          <button
+            className={`${rubik.className} font-semibold flex gap-2 items-center text-3xl bg-gradient-to-r from-[#FF9A53] to-[#FFCF53] px-8 py-4 self-start rounded-xl`}
+          >
+            Book Now
+            <ChevronDoubleRightIcon className="h-9 w-9 " />
+          </button>
+        </div>
       </div>
     </div>
   );
