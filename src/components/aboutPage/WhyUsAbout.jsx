@@ -33,20 +33,24 @@ const WhyUsAbout = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="mt-10 p-20 bg-[#EFF5FF]"
+      className="mt-10 sm:p-20 p-5 md:p-5 lg:p-20 bg-[#EFF5FF]"
     >
       <div className="text-center">
         <h1
-          className={`font-semibold text-xl text-[#FF9A53] ${poppins.className}`}
+          className={`font-semibold sm:text-xl text-lg md:text-lg lg:text-xl text-[#FF9A53] ${poppins.className}`}
         >
           Why Us
         </h1>
-        <p className={`text-3xl font-semibold ${rubik.className} mt-5`}>
+        <p
+          className={`sm:text-3xl text-2xl md:text-2xl lg:text-3xl font-semibold ${rubik.className} mt-5`}
+        >
           Delivering Quality, Affordable, and Engaging Learning Experiences
         </p>
       </div>
-      <div className="mt-10 max-w-screen-2xl mx-auto grid grid-cols-2 ">
-        <div className={`text-textColor text-xl ${poppins.className}`}>
+      <div className="mt-10 max-w-screen-2xl mx-auto grid sm:grid-cols-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 sm:gap-0 gap-10 md:gap-10 lg:gap-0">
+        <div
+          className={`text-textColor sm:text-xl text-lg md:text-lg lg:text-xl ${poppins.className}`}
+        >
           <h1>
             In Manfree, air16573 we create high quality, affordable,
             interactive, and accessible learning experience.
@@ -64,13 +68,16 @@ const WhyUsAbout = () => {
           {whyUs.map((item, index) => (
             <div
               key={index}
-              className="flex  items-center  gap-5 bg-white rounded-lg pr-10 border border-primary"
+              className="flex  items-center  gap-5 bg-white rounded-xl pr-10 border border-primary"
             >
-              <div className="bg-primary p-4 rounded-lg">
-                <Image src={item.icon} />
+              <div className="bg-primary sm:p-4 p-2 rounded-lg">
+                <Image
+                  src={item.icon}
+                  className="h-12 w-12 sm:h-auto sm:w-auto"
+                />
               </div>
               <h1
-                className={`${rubik.className} text-2xl font-semibold text-primary`}
+                className={`${rubik.className} sm:text-2xl text-xl md:text-xl lg:text-2xl font-semibold text-primary`}
               >
                 {item.title}
               </h1>

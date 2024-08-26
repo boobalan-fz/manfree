@@ -37,14 +37,20 @@ const ContactInfo = () => {
           <div className="flex gap-4 justify-start items-start" key={index}>
             <Image src={item.icon} width={35} height={35} alt="social" />
             <div className="flex flex-col gap-4">
-              <h1 className={`${rubik.className} font-semibold text-3xl`}>
+              <h1
+                className={`${rubik.className} font-semibold sm:text-3xl text-2xl md:text-2xl lg:text-3xl`}
+              >
                 {item.title}
               </h1>
-              <h1 className={`${poppins.className} font-medium text-xl`}>
+              <h1
+                className={`${poppins.className} font-medium sm:text-xl text-lg md:text-lg lg:text-xl`}
+              >
                 {item.value}
               </h1>
               {item.value2 && (
-                <h1 className={`${poppins.className} font-medium text-xl`}>
+                <h1
+                  className={`${poppins.className} font-medium sm:text-xl text-lg md:text-lg lg:text-xl`}
+                >
                   {item.value2}
                 </h1>
               )}
@@ -53,7 +59,9 @@ const ContactInfo = () => {
         ))}
       </div>
       <div>
-        <h1 className={`${rubik.className} font-semibold text-3xl`}>
+        <h1
+          className={`${rubik.className} font-semibold sm:text-3xl text-2xl md:text-2xl lg:text-3xl`}
+        >
           Connect with us on
         </h1>
         <div className="flex gap-7 mt-3">

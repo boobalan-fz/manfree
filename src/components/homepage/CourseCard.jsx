@@ -18,7 +18,7 @@ const CourseCard = ({ data }) => {
             {data.tag}
           </span>
           <div>
-            <h1 className="font-bold text-[30px] text-[#183D6D]">
+            <h1 className="font-bold sm:text-3xl text-2xl md:text-2xl lg:text-3xl text-[#183D6D]">
               {data?.title}
             </h1>
           </div>

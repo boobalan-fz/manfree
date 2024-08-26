@@ -9,8 +9,12 @@ export const createBatch = async (data) => {
 
 export const getAllBatch = async () => {
   await connectMongoDB();
+
+  const today = new Date();
+
   const batches = await Batch.find().populate("course");
-  return batches;
+  const updatedBatch = batches?.filter((item) => new Date(item?.date) > today);
+  return updatedBatch;
 };
 
 export const updateBatchById = async (id, data) => {

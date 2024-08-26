@@ -15,7 +15,7 @@ export default function Example({ data }) {
         <Disclosure as="div" className="px-6 py-2" defaultOpen={false}>
           <DisclosureButton className="group flex w-full items-center justify-between">
             <span
-              className={`text-[18px] font-semibold ${rubik.className} text-[#183D6D]`}
+              className={`sm:text-lg text-base md:text-base lg:text-lg font-semibold ${rubik.className} text-[#183D6D]`}
             >
               {data.title}
             </span>
@@ -27,7 +27,7 @@ export default function Example({ data }) {
                 <li className=" flex gap-3 items-center" key={index}>
                   <Image src={list} alt="dummy" />
                   <h1
-                    className={`text-[#797A84] ${poppins.className} font-normal text-base`}
+                    className={`text-[#797A84] ${poppins.className} font-normal sm:text-base text-sm md:text-sm lg:text-base`}
                   >
                     {item}
                   </h1>

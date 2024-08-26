@@ -7,11 +7,11 @@ const page = () => {
   return (
     <div>
       <CourseTitle title={"Contact Us"} />
-      <div className=" grid sm:grid-cols-2 grid-cols-1 sm:px-32 px-10 py-20">
+      <div className=" grid sm:grid-cols-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 sm:gap-0 gap-10 md:gap-10 lg:gap-0 sm:px-32 px-5 md:px-5 lg:px-32 sm:py-20 py-10 md:py-10 lg:py-20">
         <ContactInfo />
         <ContactForm />
       </div>
-      <div className="px-32 pb-20">
+      <div className="sm:px-32 px-5 md:px-5 lg:px-32 pb-20">
         <h1 className={`font-bold text-3xl text-primary ${rubik.className}`}>
           Our location
         </h1>

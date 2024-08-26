@@ -27,12 +27,12 @@ const CourseTitle = ({ title, data }) => {
 
   return (
     <div className="bg-[#F5F9FB]  flex justify-between">
-      <div className="px-20 w-full  h-full pt-12">
+      <div className="sm:px-20 px-5 md:px-5 lg:px-20 w-full  h-full py-12">
         <div>
           <Breadcrumbs navBar={navBar} />
         </div>
         <h1
-          className={`${rubik.className} text-[#183D6D] pt-12 font-semibold text-5xl w-[800px]`}
+          className={`${rubik.className} text-[#183D6D] py-12 font-semibold sm:text-5xl text-3xl lg:text-5xl md:text-3xl`}
         >
           {title}
         </h1>
@@ -46,23 +46,31 @@ const CourseTitle = ({ title, data }) => {
           <div className="flex gap-6 item-end pt-5">
             <span className="flex items-center justify-center  gap-2">
               <BookOpenIcon className="h-5 w-5 text-[#183D6D] " />
-              <h3 className="text-[#696969] font-normal text-sm">03 Modules</h3>
+              <h3 className="text-[#696969] font-normal sm:text-sm text-xs">
+                03 Modules
+              </h3>
             </span>
             <span className="flex items-center justify-center  gap-2">
               <ClockIcon className="h-5 w-5 text-[#183D6D] " />
-              <h3 className="text-[#696969] font-normal text-sm">10 hours</h3>
+              <h3 className="text-[#696969] font-normal sm:text-sm text-xs">
+                10 hours
+              </h3>
             </span>
             <span className="flex items-center justify-center  gap-2">
               <Image src={Union} className="h-5 w-5" alt="img" />
-              <h3 className="text-[#696969] font-normal text-sm">
+              <h3 className="text-[#696969] font-normal sm:text-sm text-xs">
                 Intermediate
               </h3>
             </span>
           </div>
         )}
       </div>
-      <div className="">
-        <Image src={coursebanner} alt="img" />
+      <div className="sm:block hidden">
+        <Image
+          src={coursebanner}
+          alt="img"
+          className=" h-full object-fill object-center"
+        />
       </div>
     </div>
   );

@@ -16,12 +16,16 @@ const ContactForm = () => {
   const { control, handleSubmit, watch, setError, reset } = form;
 
   return (
-    <div className="bg-[#EFF5FF] p-16 rounded-2xl ">
+    <div className="bg-[#EFF5FF] sm:p-16 p-8 md:p-8 lg:p-16 rounded-2xl ">
       <div className="space-y-5">
-        <h1 className={`${rubik.className} font-bold text-4xl text-primary`}>
+        <h1
+          className={`${rubik.className} font-bold sm:text-4xl text-3xl md:text-3xl lg:text-4xl text-primary`}
+        >
           Get in Touch
         </h1>
-        <h1 className={`${poppins.className} font-medium text-xl text-primary`}>
+        <h1
+          className={`${poppins.className} font-medium sm:text-xl text-lg md:text-lg lg:text-xl text-primary`}
+        >
           You can reach us anytime
         </h1>
       </div>

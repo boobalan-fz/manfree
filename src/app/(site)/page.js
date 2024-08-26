@@ -139,7 +139,9 @@ export default function Home() {
     <div>
       <HomeBanner />
       <AboutUs />
-      <div className={` bg-[#F5F9FB] px-8 py-10 sm:px-20 sm:py-14`}>
+      <div
+        className={` bg-[#F5F9FB] px-5 md:px-5 lg:px-20 py-10 sm:px-20 sm:py-14`}
+      >
         <h1
           className={`${rubik.className} font-semibold text-xl text-center  sm:text-2xl   text-[#FF9A53]`}
         >
@@ -150,7 +152,7 @@ export default function Home() {
         >
           Master Your Future with Expert Training
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 w-full gap-8 pt-12 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-3 w-full gap-8 pt-12 ">
           {SpecialCardData.map((data, index) => (
             <SpecialCard
               key={index}
@@ -161,14 +163,14 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className=" p-20">
+      <div className=" sm:p-20 p-5 md:p-5 lg:p-20">
         <h1
-          className={`${rubik.className}  text-2xl text-center font-semibold text-secondary`}
+          className={`${rubik.className}  sm:text-2xl text-xl md:text-xl lg:text-2xl text-center font-semibold text-secondary`}
         >
           Popular courses
         </h1>
         <p
-          className={`${rubik.className} text-4xl text-center font-semibold text-primary mt-3`}
+          className={`${rubik.className} sm:text-4xl text-3xl md:text-3xl lg:text-4xl text-center font-semibold text-primary mt-3`}
         >
           Unlock Your Potential with Our Top Courses
         </p>
@@ -179,12 +181,6 @@ export default function Home() {
               <CourseCard data={item} key={index} />
             ))}
         </div>
-        <Link
-          href={`/courses`}
-          className="text-[#FF9A53]  flex gap-2 items-center justify-end hover:underline  mt-2 w-full"
-        >
-          View All <ArrowLongRightIcon className="h-5 w-5 mt-[1px]" />
-        </Link>
       </div>
       {/* Skill to next level */}
 
@@ -192,20 +188,20 @@ export default function Home() {
         <SkillToNextLevel />
       </div>
 
-      <div className="px-8 py-4 sm:px-20 sm:py-12  grid grid-cols-2 gap-8">
+      <div className="px-5 md:px-5 lg:px-20 py-10 sm:px-20 sm:py-12  grid sm:grid-cols-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
           <h1
-            className={`${rubik.className} text-secondary font-semibold text-2xl `}
+            className={`${rubik.className} text-secondary font-semibold sm:text-2xl text-xl md:text-xl lg:text-2xl `}
           >
             Recent Works
           </h1>
           <p
-            className={`${rubik.className} text-primary font-semibold text-4xl mt-3`}
+            className={`${rubik.className} text-primary font-semibold sm:text-4xl text-3xl md:text-3xl lg:text-4xl mt-3`}
           >
             Showcasing Our Latest Achievements
           </p>
           <div className={`${poppins.className} pt-6`}>
-            <p className="text-textColor  text-xl font-normal">
+            <p className="text-textColor  sm:text-xl text-lg md:text-lg lg:text-xl font-normal">
               In addition to training, we specialize in projects for Industrial
               Automation and Embedded Systems. Our portfolio includes Automation
               Panel Boards, PLC programming, Embedded solutions, and IoT
@@ -215,7 +211,7 @@ export default function Home() {
               successful projects and product developments.
             </p>
 
-            <button className="pt-4 flex gap-4  text-secondary text-xl items-center ">
+            <button className="pt-4 flex gap-4  text-secondary sm:text-xl text-lg md:text-lg lg:text-xl items-center ">
               View All <ArrowLongRightIcon className="w-7 h-7" />
             </button>
           </div>
@@ -228,7 +224,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-white w-full h-full flex rounded-sm items-center justify-center ">
+        <div className="bg-white w-full h-full flex rounded-sm items-center justify-center sm:order-none -order-1 md:-order-1 lg:order-none ">
           <Image src={image} alt="success" />
         </div>
       </div>
@@ -236,16 +232,16 @@ export default function Home() {
         style={{
           backgroundImage: `url(${blog.src})`,
         }}
-        className=" p-20 bg-[#EFF5FF]"
+        className=" sm:p-20 p-5 md:p-5 lg:p-20 bg-[#EFF5FF]"
       >
         <div className="text-center">
           <h1
-            className={`${rubik.className} text-2xl font-semibold text-secondary`}
+            className={`${rubik.className} sm:text-2xl text-xl md:text-xl lg:text-2xl font-semibold text-secondary`}
           >
             Latest from our blogs
           </h1>
           <h1
-            className={`${rubik.className} text-4xl  font-semibold text-primary mt-3`}
+            className={`${rubik.className} sm:text-4xl text-3xl md:text-3xl lg:text-4xl  font-semibold text-primary mt-3`}
           >
             Stay Informed with Our Latest Insights
           </h1>
@@ -264,7 +260,7 @@ export default function Home() {
         <UpcomingEvents />
       </div>
       <div className="py-20">
-        <h1 className=" text-4xl text-center  sm:text-5xl font-semibold  text-[#183D6D] ">
+        <h1 className=" text-4xl md:text-4xl lg:text-5xl text-center  sm:text-5xl font-semibold  text-[#183D6D] ">
           Our Students Work In
         </h1>
         <Marquee />
@@ -276,21 +272,21 @@ export default function Home() {
           backgroundPosition: "center",
           backgroundSize: "contain",
         }}
-        className="px-20 pb-20"
+        className="sm:px-20 px-5 md:px-5 lg:px-20 pb-20"
       >
         <div className={`text-center`}>
           <h1
-            className={`${rubik.className} font-semibold text-secondary text-2xl`}
+            className={`${rubik.className} font-semibold text-secondary sm:text-2xl text-xl md:text-xl lg:text-2xl`}
           >
             Reviews
           </h1>
           <p
-            className={`mt-3 ${rubik.className} text-4xl font-semibold text-primary`}
+            className={`mt-3 ${rubik.className} sm:text-4xl text-3xl md:text-3xl lg:text-4xl  font-semibold text-primary`}
           >
             See What Our Learners Are Saying
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-10 mt-10">
+        <div className="grid sm:grid-cols-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
           <ReviewCard />
           <ReviewCard />
           <ReviewCard />
@@ -299,26 +295,26 @@ export default function Home() {
           <ReviewCard />
         </div>
       </div>
-      <div className="px-20 py-10 grid grid-cols-2 gap-10 ">
+      <div className="sm:px-20 px-5 md:px-5 lg:px-20 py-10 grid sm:grid-cols-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 ">
         <Image src={trail} />
         <div className="self-center flex flex-col gap-10">
           <h1
-            className={`${rubik.className} font-semibold text-6xl text-primary`}
+            className={`${rubik.className} font-semibold sm:text-6xl text-4xl md:text-4xl lg:text-6xl text-primary`}
           >
             Free Trial Class Available
           </h1>
           <p
-            className={`${poppins.className} font-normal text-2xl text-textColor`}
+            className={`${poppins.className} font-normal sm:text-2xl text-xl md:text-xl lg:text-2xl text-textColor`}
           >
             Innovative courses and expert guidance. Gain practical skills for
             high-demand fields. Our experienced instructors ensure comprehensive
             learning. Join us and advance your career with confidence.
           </p>
           <button
-            className={`${rubik.className} font-semibold flex gap-2 items-center text-3xl bg-gradient-to-r from-[#FF9A53] to-[#FFCF53] px-8 py-4 self-start rounded-xl`}
+            className={`${rubik.className} font-semibold flex gap-2 items-center sm:text-3xl text-2xl md:text-2xl lg:text-3xl bg-gradient-to-r from-[#FF9A53] to-[#FFCF53] sm:px-8 px-5 md:px-5 lg:px-8 py-4 self-start rounded-xl`}
           >
             Book Now
-            <ChevronDoubleRightIcon className="h-9 w-9 " />
+            <ChevronDoubleRightIcon className="sm:h-9 sm:w-9 h-7 md:h-7 lg:h-9" />
           </button>
         </div>
       </div>

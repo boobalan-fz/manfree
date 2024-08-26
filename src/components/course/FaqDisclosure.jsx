@@ -10,10 +10,14 @@ export default function Example({ data }) {
   return (
     <div className="">
       <div className=" border-b ">
-        <Disclosure as="div" className="px-6 py-5" defaultOpen={false}>
+        <Disclosure
+          as="div"
+          className="sm:px-6 px-2 md:px-2 lg:px-6 py-5"
+          defaultOpen={false}
+        >
           <DisclosureButton className="group flex w-full items-center text-left justify-between">
             <span
-              className={`text-[18px] font-semibold ${rubik.className} text-[#183D6D] w-[95%]`}
+              className={`sm:text-lg text-base md:text-base lg:text-lg font-semibold ${rubik.className} text-[#183D6D] w-[95%]`}
             >
               {data.question}
             </span>

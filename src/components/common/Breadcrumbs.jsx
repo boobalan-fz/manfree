@@ -51,7 +51,9 @@ const Breadcrumbs = ({ navBar }) => {
                   href={crumb.href}
                   className={`${
                     crumb.href === pathname ? "text-[#FF9A53]" : "text-primary"
-                  } text-2xl font-semibold ${rubik.className} capitalize`}
+                  } sm:text-2xl text-xl md:text-xl lg:text-2xl font-semibold ${
+                    rubik.className
+                  } capitalize`}
                 >
                   {crumb.name}
                 </Link>
@@ -59,7 +61,9 @@ const Breadcrumbs = ({ navBar }) => {
                 <span
                   className={`${
                     crumb.href === pathname ? "text-[#FF9A53]" : "text-primary"
-                  } text-2xl font-semibold ${rubik.className} capitalize`}
+                  }  sm:text-2xl text-xl md:text-xl lg:text-2xl  font-semibold ${
+                    rubik.className
+                  } capitalize`}
                 >
                   {crumb.name}
                 </span>

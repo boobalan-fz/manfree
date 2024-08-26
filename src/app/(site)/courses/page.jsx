@@ -19,29 +19,31 @@ const Page = () => {
   return (
     <div>
       <CourseTitle title={"All Courses"} />
-      <div className="text-left px-20 py-10">
-        <h1
-          className={`font-semibold text-xl text-[#FF9A53] ${rubik.className}`}
-        >
-          Courses we’re offering
-        </h1>
-        <p
-          className={`text-4xl font-semibold text-primary ${rubik.className} mt-5`}
-        >
-          Empowering Your Journey to Mastery
-        </p>
-      </div>
-      <div>
-        <CourseFilterButtons
-          selectedTag={selectedTag}
-          onSelectTag={setSelectedTag}
-        />
-      </div>
-      <div className="px-20 pb-20">
-        <div className="grid sm:grid-cols-3 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10">
-          {filteredCourses?.map((item, index) => (
-            <CourseCard data={item} key={index} />
-          ))}
+      <div className="sm:px-20 px-5 md:px-5">
+        <div className="text-left  py-10">
+          <h1
+            className={`font-semibold sm:text-xl text-lg md:text-lg lg:text-xl text-[#FF9A53] ${rubik.className}`}
+          >
+            Courses we’re offering
+          </h1>
+          <p
+            className={`sm:text-4xl text-3xl md:text-3xl lg:text-4xl font-semibold text-primary ${rubik.className} mt-5`}
+          >
+            Empowering Your Journey to Mastery
+          </p>
+        </div>
+        <div>
+          <CourseFilterButtons
+            selectedTag={selectedTag}
+            onSelectTag={setSelectedTag}
+          />
+        </div>
+        <div className=" pb-20">
+          <div className="grid sm:grid-cols-3 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:gap-10 gap-5 md:gap-5 lg:gap-10">
+            {filteredCourses?.map((item, index) => (
+              <CourseCard data={item} key={index} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

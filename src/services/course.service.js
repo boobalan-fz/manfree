@@ -22,9 +22,15 @@ export const updateCourseById = async (id, data) => {
 
 export const getCourseById = async (id) => {
   await connectMongoDB();
+
+  const today = new Date();
+
   const batches = await Batch.find({ course: new mongoose.Types.ObjectId(id) });
   const course = await Course.findOne({ _id: id });
   const finalData = { course, batches };
+  finalData.batches = finalData?.batches.filter(
+    (batch) => new Date(batch.date) > today
+  );
 
   return finalData;
 };

@@ -22,32 +22,34 @@ const LatestBlog = ({ data }) => {
       </div>
       <div className="px-6 pt-6 pb-4 flex flex-col gap-4  rounded-b-md">
         <span
-          className={`text-2xl font-semibold  text-primary p-2 border border-primary self-start  rounded-md ${rubik.className}`}
+          className={`sm:text-2xl text-xl md:text-xl lg:text-2xl font-semibold  text-primary p-2 border border-primary self-start  rounded-md ${rubik.className}`}
         >
           {data?.title}
         </span>
         <div className="flex gap-5  ">
           <div
-            className={`${poppins.className} flex gap-2 items-center text-xl font-normal text-textColor`}
+            className={`${poppins.className} flex gap-2 items-center sm:text-xl text-lg md:text-lg lg:text-xl font-normal text-textColor`}
           >
             <CalendarIcon className="w-7 h-7 text-primary" />
             12 Aug, 2024
           </div>
 
           <div
-            className={`${poppins.className} flex gap-2 items-center text-xl font-normal text-textColor`}
+            className={`${poppins.className} flex gap-2 items-center sm:text-xl text-lg md:text-lg lg:text-xl font-normal text-textColor`}
           >
             <UserIcon className="w-7 h-7 text-primary" />
             Author
           </div>
         </div>
-        <p className={`${rubik.className} font-semibold text-3xl text-primary`}>
+        <p
+          className={`${rubik.className} font-semibold sm:text-3xl text-2xl md:text-2xl lg:text-3xl text-primary`}
+        >
           {data?.description}
         </p>
       </div>
       <Link
         href={`/blogs`}
-        className={`${poppins.className} flex grow items-end px-6 pb-4 text-xl font-medium gap-2 text-secondary`}
+        className={`${poppins.className} flex grow items-end px-6 pb-4 sm:text-xl text-lg md:text-lg lg:text-xl font-medium gap-2 text-secondary`}
       >
         Learn More <ArrowLongRightIcon className="h-7 w-7 text-secondary" />
       </Link>

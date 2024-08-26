@@ -14,21 +14,21 @@ const page = () => {
       <WhyUsAbout />
       <SuccessfullStories />
       <CoreValue />
-      <div className="p-20">
-        <div className="bg-gradient-to-r from-[#001424] to-[#004D8A] flex justify-between px-20 py-16 rounded-lg">
+      <div className="sm:p-20 p-5 md:p-5 lg:p-20">
+        <div className="bg-gradient-to-r from-[#001424] to-[#004D8A] flex justify-between gap-5 sm:flex-row flex-col md:flex-row lg:flex-row sm:px-20 px-5 md:px-5 lg:px-20 sm:py-16 py-5 md:py-5 lg:py-16 rounded-lg">
           <div
-            className={`${rubik.className} font-semibold text-4xl text-white`}
+            className={`${rubik.className} font-semibold sm:text-4xl text-2xl md:text-2xl lg:text-4xl text-white`}
           >
-            <p>Jumpstart Your Learning Journey</p>
-            <p className="mt-3">
+            <p className="leading-relaxed">
+              Jumpstart Your Learning Journey <br className="sm:block hidden" />
               with a<span className="text-[#FF9A53]"> Free Trial Class</span>
             </p>
           </div>
           <button
-            className={`${rubik.className} font-semibold flex gap-2 items-center text-3xl bg-gradient-to-r from-[#FF9A53] to-[#FFCF53] px-8 py-4 self-center rounded-xl`}
+            className={`${rubik.className} font-semibold flex gap-2 items-center sm:text-3xl text-2xl md:text-2xl lg:text-3xl bg-gradient-to-r from-[#FF9A53] to-[#FFCF53] sm:px-8 px-4 md:px-4 lg:px-8 py-4 self-center rounded-xl`}
           >
             Book Now
-            <ChevronDoubleRightIcon className="h-9 w-9 " />
+            <ChevronDoubleRightIcon className="sm:h-9 h-5 md:h-5 lg:h-9 w-9 " />
           </button>
         </div>
       </div>

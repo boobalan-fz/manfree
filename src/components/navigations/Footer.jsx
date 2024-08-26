@@ -109,16 +109,16 @@ const Footer = () => {
       }}
       className="w-full px-8 py-10 sm:px-16 sm:py-14"
     >
-      <div className="flex flex-col sm:flex-row w-full sm:justify-between gap-10 sm:gap-0  sm:items-start">
+      <div className="flex flex-col sm:flex-row w-full sm:justify-between gap-7 sm:gap-0 md:gap-7 lg:gap-0  sm:items-start">
         <div>
-          <h1 className="font-semibold text-[#FF9A53] pb-7 text-3xl">
+          <h1 className="font-semibold text-[#FF9A53] sm:pb-7 pb-3 md:pb-3 lg:pb-7 sm:text-3xl text-2xl md:text-2xl lg:text-3xl">
             Our Courses
           </h1>
-          <span className="flex flex-col items-start gap-7 font  ">
+          <span className="flex flex-col items-start sm:gap-7 gap-4 md:gap-4 lg:gap-7   ">
             {courses.map((item, index) => (
               <Link
                 href={`${item.href}`}
-                className=" text-[#797A84] text-xl"
+                className=" text-[#797A84] sm:text-xl text-lg md:text-lg lg:text-xl"
                 key={index}
               >
                 {item.title}
@@ -127,14 +127,14 @@ const Footer = () => {
           </span>
         </div>
         <div>
-          <h1 className="font-semibold text-[#FF9A53] pb-7 text-3xl">
+          <h1 className="font-semibold text-[#FF9A53] sm:pb-7 pb-3 md:pb-3 lg:pb-7 sm:text-3xl text-2xl md:text-2xl lg:text-3xl">
             Website
           </h1>
-          <span className="flex flex-col items-start gap-7 font  ">
+          <span className="flex flex-col items-start sm:gap-7 gap-4 md:gap-4 lg:gap-7   ">
             {website.map((item, ind) => (
               <Link
                 href={item?.route}
-                className=" text-[#797A84] text-xl"
+                className=" text-[#797A84] sm:text-xl text-lg md:text-lg lg:text-xl"
                 key={ind}
               >
                 {item.name}
@@ -143,10 +143,10 @@ const Footer = () => {
           </span>
         </div>
         <div>
-          <h1 className="font-semibold text-[#FF9A53] pb-7 text-3xl">
+          <h1 className="font-semibold text-[#FF9A53] sm:pb-7 pb-3 md:pb-3 lg:pb-7 sm:text-3xl text-2xl md:text-2xl lg:text-3xl">
             Contact us
           </h1>
-          <div className="flex flex-col gap-6  text-[#797A84] text-xl">
+          <div className="flex flex-col sm:gap-7 gap-4 md:gap-4 lg:gap-7  text-[#797A84] sm:text-xl text-lg md:text-lg lg:text-xl">
             <span className=" ">
               12/2 R.V.M Complex, Avinashi Road,
               <br />
