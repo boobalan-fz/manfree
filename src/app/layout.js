@@ -1,5 +1,5 @@
 import "./globals.css";
-import { inter } from "./font";
+import { poppins } from "./font";
 import Provider from "@/components/Provider";
 
 export const metadata = {
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/Manfree-Logo.svg" type="image/svg+xml" />
       </head>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <Provider>{children}</Provider>
       </body>
     </html>

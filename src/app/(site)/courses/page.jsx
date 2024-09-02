@@ -19,7 +19,7 @@ const Page = () => {
   return (
     <div>
       <CourseTitle title={"All Courses"} />
-      <div className="sm:px-20 px-5 md:px-5">
+      <div className="sm:px-20 px-5 md:px-5 lg:px-20">
         <div className="text-left  py-10">
           <h1
             className={`font-semibold sm:text-xl text-lg md:text-lg lg:text-xl text-[#FF9A53] ${rubik.className}`}

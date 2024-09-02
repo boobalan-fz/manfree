@@ -22,12 +22,12 @@ const Page = () => {
     <div className="">
       <CourseTitle title="Certified Industrial Automation Associate" data />
       <div className=" max-w-[1920px] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-5 sm:px-20 px-4 sm:gap-20 ">
+        <div className="grid grid-cols-1 sm:grid-cols-5 md:grid-cols-1 lg:grid-cols-5 sm:px-20 px-5 md:px-5 lg:px-20 sm:gap-20 gap-5 md:gap-5 lg:gap-20  ">
           <div className="py-4 sm:col-span-3">
             {/* course description */}
             <div className="pt-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Course Description
               </h1>
@@ -50,7 +50,7 @@ const Page = () => {
             {/* what you will learn */}
             <div className="py-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 What you will learn
               </h1>
@@ -63,7 +63,7 @@ const Page = () => {
                       className="h-4 w-4 mt-[1px]"
                     />
                     <p
-                      className={`${poppins.className} text-[#797A84] text-sm `}
+                      className={`${poppins.className} text-[#797A84] text-base `}
                     >
                       {item}
                     </p>
@@ -75,7 +75,7 @@ const Page = () => {
             {/* course content */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Course Content
               </h1>
@@ -90,7 +90,7 @@ const Page = () => {
             {/* job oppurtuintes */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Industrial Automation Job Opportunities
               </h1>
@@ -114,7 +114,7 @@ const Page = () => {
             {/* pre-requisite */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Pre-Requisite
               </h1>
@@ -130,7 +130,7 @@ const Page = () => {
             {/* who is this course*/}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 Who is this course for ?
               </h1>
@@ -162,7 +162,7 @@ const Page = () => {
             {/* faq */}
             <div className="pb-8">
               <h1
-                className={`${rubik.className} text-4xl  font-semibold text-[#183D6D]`}
+                className={`${rubik.className} text-2xl  font-semibold text-[#183D6D]`}
               >
                 FAQ related to this course
               </h1>
@@ -176,7 +176,7 @@ const Page = () => {
             {data?.batches.length > 0 && (
               <div>
                 <h1
-                  className={`${rubik.className} font-semibold text-4xl text-[#183D6D]`}
+                  className={`${rubik.className} font-semibold text-2xl text-[#183D6D]`}
                 >
                   Upcoming Batches
                 </h1>
@@ -190,7 +190,7 @@ const Page = () => {
 
           <div className="w-full  pb-4 sm:pb-0 sm:col-span-2 flex justify-center items-start">
             <div
-              className={` -mt-[120px] top-0 sm:sticky rounded drop-shadow-xl bg-white transition-opacity duration-[80ms] w-[380px] lg:w-[440px]    sm:shadow-lg sm:opacity-100 sm:transform sm:translate-y-0 sm:scale-100 sm:transition-none sm:duration-0 sm:ease-in-out`}
+              className={` sm:-mt-[120px] my-5 md:my-5 lg:-mt-[120px] top-0 sm:sticky rounded drop-shadow-xl  hidden sm:block bg-white transition-opacity duration-[80ms] w-[380px] lg:w-[440px]    sm:shadow-lg sm:opacity-100 sm:transform sm:translate-y-0 sm:scale-100 sm:transition-none sm:duration-0 sm:ease-in-out`}
             >
               <div className="  p-6">
                 <div className="bg-[#F1F1F1] flex items-center justify-center rounded-md px-24 py-24">
@@ -217,7 +217,7 @@ const Page = () => {
                   </ul>
 
                   <button
-                    className={`${rubik.className} hidden sm:block bg-[#183D6D] mt-5 text-[#FF9A53] rounded-lg text-center py-2 font-semibold w-full text-lg`}
+                    className={`${rubik.className} bg-[#183D6D] mt-5 text-[#FF9A53] rounded-lg text-center py-2 font-semibold w-full text-lg`}
                   >
                     Join Course
                   </button>
@@ -227,11 +227,13 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <button
-        className={`${rubik.className} fixed bottom-0 sm:hidden bg-[#183D6D] mt-2 text-[#FF9A53] rounded-lg text-center py-4 font-semibold w-full text-lg`}
-      >
-        Join Course
-      </button>
+      <div className="sm:hidden fixed bottom-0  w-full">
+        <button
+          className={`${rubik.className}  bg-[#183D6D] text-[#FF9A53]  text-center py-2 font-semibold w-full text-lg`}
+        >
+          Join Course
+        </button>
+      </div>
     </div>
   );
 };
