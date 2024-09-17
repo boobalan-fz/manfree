@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import computer from "@/assets/computer.jpg";
 import embeddedpic from "@/assets/embeddedpic.jpg";
@@ -23,7 +24,9 @@ import productdevelopment from "@/assets/specializtions/productdevelopment.svg";
 import pcb from "@/assets/specializtions/pcb.svg";
 import automationproduct from "@/assets/specializtions/automationproduct.svg";
 import corparate from "@/assets/specializtions/corparate.svg";
-import image from "@/assets/image.png";
+import achieveOne from "@/assets/achieveOne.jpg";
+import achieveTwo from "@/assets/achieveTwo.jpg";
+import achieveThree from "@/assets/achieveThree.jpg";
 import Marquee from "@/components/homepage/Marquee";
 import Link from "next/link";
 import { courses } from "@/constant/dummy";
@@ -31,6 +34,7 @@ import UpcomingEvents from "@/components/homepage/UpcomingEvents";
 import ReviewCard from "@/components/homepage/ReviewCard";
 import SkillToNextLevel from "@/components/homepage/SkillToNextLevel";
 import UpcomingBatches from "@/components/homepage/UpcomingBatches";
+import { useGetAllBatches } from "@/features/batch/batch.hooks";
 
 const SpecialCardData = [
   {
@@ -211,24 +215,37 @@ export default function Home() {
               successful projects and product developments.
             </p>
 
-            <button className="pt-4 flex gap-4  text-secondary sm:text-xl text-lg md:text-lg lg:text-xl items-center ">
+            {/* <button className="pt-4 flex gap-4  text-secondary sm:text-xl text-lg md:text-lg lg:text-xl items-center ">
               View All <ArrowLongRightIcon className="w-7 h-7" />
-            </button>
+            </button> */}
           </div>
-          <div className="grid grid-cols-2  gap-10 pt-8 w-full h-52">
-            <div className="bg-white  flex rounded-sm items-center justify-center ">
-              <Image src={image} className="w-10 h-10" alt="alt1" />
+          <div className="grid grid-cols-2  sm:gap-10 gap-2 pt-8 w-full h-52">
+            <div>
+              <Image
+                src={achieveTwo}
+                alt="alt1"
+                className="h-full object-cover rounded-md"
+              />
             </div>
-            <div className="bg-white flex rounded-sm items-center justify-center ">
-              <Image src={image} className="w-10 h-10" alt="alt-2" />
+            <div>
+              <Image
+                src={achieveThree}
+                alt="alt-2 "
+                className="h-full object-cover rounded-md"
+              />
             </div>
           </div>
         </div>
-        <div className="bg-white w-full h-full flex rounded-sm items-center justify-center sm:order-none -order-1 md:-order-1 lg:order-none ">
-          <Image src={image} alt="success" />
+        <div className="w-full  flex rounded-sm items-center justify-center sm:order-none -order-1 md:-order-1 lg:order-none ">
+          <Image
+            src={achieveOne}
+            alt="success"
+            className="rounded-md object-cover"
+            height={600}
+          />
         </div>
       </div>
-      <div
+      {/* <div
         style={{
           backgroundImage: `url(${blog.src})`,
         }}
@@ -252,7 +269,7 @@ export default function Home() {
             <LatestBlog data={item} key={index} />
           ))}
         </div>
-      </div>
+      </div> */}
       <div>
         <UpcomingBatches />
       </div>

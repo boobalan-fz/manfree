@@ -33,7 +33,7 @@ const WhyUsAbout = () => {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
-      className="mt-10 sm:p-20 p-5 md:p-5 lg:p-20 bg-[#EFF5FF]"
+      className=" sm:p-20 p-5 md:p-5 lg:p-20 bg-[#EFF5FF]"
     >
       <div className="text-center">
         <h1

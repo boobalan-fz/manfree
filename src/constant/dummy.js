@@ -110,7 +110,7 @@ export const courses = [
       "Optimize performance with precision VFD and servo installation.",
     img: robot,
     tag: "industrial",
-    href: "/courses/vfd",
+    href: "#",
   },
   {
     tag: "Software",
@@ -119,7 +119,7 @@ export const courses = [
       "Build the future with versatile software skills in Java, Python, and more.",
     img: servo,
     tag: "software",
-    href: "/courses/software",
+    href: "#",
   },
   {
     tag: "Automation",
@@ -146,7 +146,7 @@ export const courses = [
       "IoT solutions for a connected world. Innovate with smart devices and data-driven insights.",
     img: inventor,
     tag: "embedded",
-    href: "/courses/iot",
+    href: "#",
   },
 ];
 

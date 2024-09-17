@@ -2,7 +2,8 @@
 import { poppins, rubik } from "@/app/font";
 import CourseTitle from "@/components/course/CourseTitle";
 import Image from "next/image";
-import image from "@/assets/image.png";
+import embeddedpic from "@/assets/embeddedpic.jpg";
+
 import tikicon from "@/assets/tick.svg";
 import {
   courseIncludes,
@@ -171,16 +172,18 @@ const Page = () => {
               </ul>
             </div>
             {data?.batches.length > 0 && (
-              <div>
+              <div className="my-10">
                 <h1
                   className={`${rubik.className} font-semibold text-2xl  text-[#183D6D]`}
                 >
                   Upcoming Batches
                 </h1>
 
-                {data?.batches.map((item, index) => (
-                  <UpcomingBatchCard data={item} key={index} />
-                ))}
+                <div className="grid grid-cols-2">
+                  {data?.batches.map((item, index) => (
+                    <UpcomingBatchCard data={item} key={index} />
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -190,8 +193,8 @@ const Page = () => {
               className={` sm:-mt-[120px] my-5 md:my-5 lg:-mt-[120px] top-0 sm:sticky hidden sm:block rounded drop-shadow-xl bg-white transition-opacity duration-[80ms] w-[380px] lg:w-[440px]    sm:shadow-lg sm:opacity-100 sm:transform sm:translate-y-0 sm:scale-100 sm:transition-none sm:duration-0 sm:ease-in-out`}
             >
               <div className="  p-6">
-                <div className="bg-[#F1F1F1] flex items-center justify-center rounded-md px-24 py-24">
-                  <Image src={image} alt="dummy" className="w-24 h-16" />
+                <div className="bg-[#F1F1F1]  rounded-md ">
+                  <Image src={embeddedpic} alt="dummy" className="rounded-md" />
                 </div>
                 <div className="mt-5">
                   <h3

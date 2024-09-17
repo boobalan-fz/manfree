@@ -14,7 +14,7 @@ const SpecialCard = ({ img, title, content }) => {
           />
         </div>
         <h2
-          className={`${rubik.className} text-primary text-2xl  sm:text-3xl font-semibold`}
+          className={`${rubik.className} text-primary text-2xl text-center sm:text-3xl font-semibold`}
         >
           {title}
         </h2>

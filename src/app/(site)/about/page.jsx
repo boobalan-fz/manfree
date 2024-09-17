@@ -1,16 +1,32 @@
-import { poppins, rubik } from "@/app/font";
+import { rubik } from "@/app/font";
 import CoreValue from "@/components/aboutPage/CoreValue";
 import SuccessfullStories from "@/components/aboutPage/SuccessfullStories";
+import dummy from "@/assets/aboutImage.png";
 import WhyUsAbout from "@/components/aboutPage/WhyUsAbout";
 import CourseTitle from "@/components/course/CourseTitle";
-import AboutUs from "@/components/homepage/AboutUs";
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 const page = () => {
   return (
     <div>
       <CourseTitle title={"About us"} />
-      <AboutUs />
+      <div className="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-2  sm:gap-20 gap-10 md:gap-10 lg:gap-20 py-10 px-5 max-w-screen-lg mx-auto justify-center items-center">
+        <div className="">
+          <Image src={dummy} />
+        </div>
+        <p>
+          Manfree Technologies is a prominent technical training institute and
+          product development company located in Coimbatore. Established in
+          2012, we offer training in Industrial Automation, Embedded Systems,
+          PCB designing, C, C++, Python, and various other fields. Our main
+          objective is to groom students as competent professionals ready for
+          industry roles, and facilitate their placement based on their skills.
+          Additionally, we are actively involved in Research and Development
+          (R&D), Embedded Products, IoT Solutions, PLC programming, and Panel
+          Board Manufacturing customized to meet customer requirements.
+        </p>
+      </div>
       <WhyUsAbout />
       <SuccessfullStories />
       <CoreValue />
