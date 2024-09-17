@@ -8,9 +8,21 @@ import instagram from "@/assets/contactUs/instagram.svg";
 import linkedin from "@/assets/contactUs/linkedin.svg";
 import twitter from "@/assets/contactUs/twitter.svg";
 import { poppins, rubik } from "@/app/font";
+import Link from "next/link";
 
 const ContactInfo = () => {
-  const socialMedia = [instagram, facebook, twitter, linkedin];
+  const socialMedia = [
+    {
+      img: instagram,
+      link: "https://www.instagram.com/manfreetech?igsh=MXdlMWh4MGlxMzFqdw==",
+    },
+    { img: facebook, link: "https://www.facebook.com/manfreetech" },
+    { img: twitter, link: "https://x.com/manfreetech" },
+    {
+      img: linkedin,
+      link: "https://www.linkedin.com/company/manfree-technologies---india",
+    },
+  ];
   const info = [
     {
       icon: phone,
@@ -66,7 +78,9 @@ const ContactInfo = () => {
         </h1>
         <div className="flex gap-7 mt-3">
           {socialMedia?.map((item, index) => (
-            <Image src={item} alt="social" width={35} height={35} key={index} />
+            <Link target="_blank" href={item?.link} key={index}>
+              <Image src={item?.img} alt="social" width={35} height={35} />
+            </Link>
           ))}
         </div>
       </div>

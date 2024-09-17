@@ -5,7 +5,7 @@ import { BookOpenIcon, ClockIcon } from "@heroicons/react/24/outline";
 import Union from "@/assets/Union.svg";
 import Breadcrumbs from "../common/Breadcrumbs";
 
-const CourseTitle = ({ title, data }) => {
+const CourseTitle = ({ title, data, module, hours }) => {
   const navBar = [
     {
       name: "Home",
@@ -47,13 +47,13 @@ const CourseTitle = ({ title, data }) => {
             <span className="flex items-center justify-center  gap-2">
               <BookOpenIcon className="h-5 w-5 text-[#183D6D] " />
               <h3 className="text-[#696969] font-normal sm:text-sm text-xs">
-                03 Modules
+                {module} Modules
               </h3>
             </span>
             <span className="flex items-center justify-center  gap-2">
               <ClockIcon className="h-5 w-5 text-[#183D6D] " />
               <h3 className="text-[#696969] font-normal sm:text-sm text-xs">
-                10 hours
+                {hours} hours
               </h3>
             </span>
             <span className="flex items-center justify-center  gap-2">

@@ -11,6 +11,7 @@ import { useGetAllBatches } from "@/features/batch/batch.hooks";
 
 const UpcomingBatches = () => {
   const { data } = useGetAllBatches();
+  console.log(data);
 
   const filler = [
     {

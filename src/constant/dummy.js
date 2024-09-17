@@ -56,23 +56,15 @@ export const SpecialCardData = [
 
 export const courses = [
   {
+    tag: "Automation",
+    title: "Industrial Automation Professional",
+    description:
+      "Drive efficiency and innovation through tailored automation solutions.",
+    img: motor,
     tag: "PLC",
-    title: "PLC Automation and Programming",
-    description:
-      "Streamline operations with expert PLC automation and programming.",
-    img: computer,
-    href: "/courses/plc",
-    tag: "embedded",
-    populare: true,
-  },
-  {
-    tag: "Embedded",
-    title: "Arduino Programmer",
-    description:
-      "Innovate and integrate with our advanced embedded systems training.",
-    img: embeddedpic,
-    tag: "embedded",
-    href: "/courses/arduinoProgrammer",
+    modules: 14,
+    hours: 360,
+    href: "/courses/industrialProfessional",
     populare: true,
   },
   {
@@ -82,7 +74,21 @@ export const courses = [
       "Innovate and integrate with our advanced embedded systems training.",
     img: embeddedpic,
     tag: "embedded",
+    modules: 10,
+    hours: 650,
     href: "/courses/embeddedProfessional",
+    populare: true,
+  },
+  {
+    tag: "Embedded",
+    title: "Arduino & IoT Programmer",
+    description:
+      "Innovate and integrate with our advanced embedded systems training.",
+    img: embeddedpic,
+    tag: "embedded",
+    modules: 10,
+    hours: 120,
+    href: "/courses/arduinoProgrammer",
     populare: true,
   },
   {
@@ -92,7 +98,20 @@ export const courses = [
       "Innovate and integrate with our advanced embedded systems training.",
     img: embeddedpic,
     tag: "embedded",
+    modules: 7,
+    hours: 460,
     href: "/courses/embeddedAssociate",
+  },
+  {
+    tag: "Automation",
+    title: "Industrial Automation Associate",
+    description:
+      "Drive efficiency and innovation through tailored automation solutions.",
+    img: motor,
+    tag: "PLC",
+    modules: 12,
+    hours: 280,
+    href: "/courses/industrialAssociate",
   },
   {
     tag: "Embedded",
@@ -101,53 +120,48 @@ export const courses = [
       "Innovate and integrate with our advanced embedded systems training.",
     img: embeddedpic,
     tag: "embedded",
+    modules: 7,
+    hours: 180,
     href: "/courses/embeddedProgrammer",
   },
   {
-    tag: "VFD",
-    title: "VFD and Servo Installation",
+    tag: "PLC",
+    title: "PLC Automation and Programming",
     description:
-      "Optimize performance with precision VFD and servo installation.",
-    img: robot,
-    tag: "industrial",
-    href: "#",
+      "Streamline operations with expert PLC automation and programming.",
+    img: computer,
+    href: "/courses/plc",
+    tag: "PLC",
+    modules: 7,
+    hours: 160,
   },
-  {
-    tag: "Software",
-    title: "Software Development",
-    description:
-      "Build the future with versatile software skills in Java, Python, and more.",
-    img: servo,
-    tag: "software",
-    href: "#",
-  },
-  {
-    tag: "Automation",
-    title: "Certified Industrial Automation Professional",
-    description:
-      "Drive efficiency and innovation through tailored automation solutions.",
-    img: motor,
-    tag: "industrial",
-    href: "/courses/industrialProfessional",
-  },
-  {
-    tag: "Automation",
-    title: "Certified Industrial Automation Associate",
-    description:
-      "Drive efficiency and innovation through tailored automation solutions.",
-    img: motor,
-    tag: "industrial",
-    href: "/courses/industrialAssociate",
-  },
-  {
-    tag: "IoT",
-    title: "IoT (Internet of Things)",
-    description:
-      "IoT solutions for a connected world. Innovate with smart devices and data-driven insights.",
-    img: inventor,
-    tag: "embedded",
-    href: "#",
-  },
+  // {
+  //   tag: "VFD",
+  //   title: "VFD and Servo Installation",
+  //   description:
+  //     "Optimize performance with precision VFD and servo installation.",
+  //   img: robot,
+  //   tag: "industrial",
+  //   href: "#",
+  // },
+  // {
+  //   tag: "Software",
+  //   title: "Software Development",
+  //   description:
+  //     "Build the future with versatile software skills in Java, Python, and more.",
+  //   img: servo,
+  //   tag: "software",
+  //   href: "#",
+  // },
+  // {
+  //   tag: "IoT",
+  //   title: "IoT (Internet of Things)",
+  //   description:
+  //     "IoT solutions for a connected world. Innovate with smart devices and data-driven insights.",
+  //   img: inventor,
+  //   tag: "embedded",
+  //   href: "#",
+  // },
 ];
 
 export const latest = [
@@ -188,6 +202,39 @@ export const courseIncludes = [
   {
     title: "Certificate of Completion",
     img: certificatecompletion,
+  },
+];
+
+export const reviews = [
+  {
+    name: "Pradeep L",
+    content:
+      "I recently completed the PLC training program at Manfree Technologies, and I can confidently say it exceeded my expectations in every way.One of the highlights of the training was the extensive hands-on experience.The staffs making the learning process both relevant and engaging.The institute offers excellent student support, including personalized guidance, doubt-clearing in any times.I got trained from an ManFree Technology they also providing placement opportunities from that I am now selected in a Alpanumeric Systems",
+  },
+  {
+    name: "Malini N",
+    content:
+      "I recently completed an embedded course at Manfree technologies , and I got selected at Qmax Systems. The curriculum is comprehensive and up-to-date, covering all the essential topics in embedded systems with a perfect blend of theory and hands-on practice. The learning environment is collaborative and inspiring, with plenty of opportunities for networking and professional growth. The fees is affordable to middle class students who are looking for this course. Thanks to all the staffs who trained , especially Naveen brother who made me to have a strong foundation in C language.",
+  },
+  {
+    name: "Vignesh J",
+    content:
+      "I have recently completed my diploma course in embedded system at Manfree Technologies and got placed in wheelson technology, coimbatore.Thank you manfree for your guidance throughout this journey and all the mentors.",
+  },
+  {
+    name: "Hemalatha S",
+    content:
+      "Hi myself Hemalatha,I'm 2018 passed out (BE-EIE).I have carrier gap of about 5 years so my profile was eliminated in all the companies so recently I have joined manfree Technologies for EMBEDDED SYSTEMS Course where I gained lot of knowledge and now I got placed.Thanks to manfree team.",
+  },
+  {
+    name: "Kasi Babu Ramakrishnan",
+    content:
+      "I highly recommend Manfree Technologies for anyone interested in learning embedded systems. The instructors are incredibly knowledgeable and explain complex concepts in a clear and understandable manner. The course content is comprehensive, covering both foundational theory and practical applications. The coaching center's supportive environment and responsive staff create an ideal learning atmosphere.Overall, Manfree Technologies offers excellent value for money and prepares students effectively for careers in embedded systems engineering.",
+  },
+  {
+    name: "Vishanth Kumar A",
+    content:
+      "I'm Vishanth Kumar Completed the PLC course in manfree and I got placed in Powermag controls system.. It's a good place to improve your skills.They Provide hands on training and clarify the doubts then and there with the affordable fees structure and flexible time manner.The staff are well knowledged also and they provide good learning experience.. If anyone want to build up your carrier in Automation I surely recommended this institute.",
   },
 ];
 
@@ -1456,16 +1503,16 @@ export const faqPlc = [
 
 export const successStories = [
   {
-    designation: "Product Development Head at Innovations",
-    name: "Name",
+    designation: "",
+    name: "Pradeep L",
     content:
-      "“Manfree Technologies played a crucial role in our latest product development. Their team provided exceptional embedded systems solutions, from initial concept to final deployment. The project's success is a testament to their technical proficiency and commitment to delivering high-quality results. We look forward to future collaborations with them”",
+      "“I recently completed the PLC training program at Manfree Technologies, and I can confidently say it exceeded my expectations in every way.One of the highlights of the training was the extensive hands-on experience.The staffs making the learning process both relevant and engaging.The institute offers excellent student support, including personalized guidance, doubt-clearing in any times.I got trained from an ManFree Technology they also providing placement opportunities from that I am now selected in a Alpanumeric Systems”",
   },
   {
-    designation: "Product Development Head at Innovations",
-    name: "Name",
+    designation: "",
+    name: "Malini N",
     content:
-      "“Manfree Technologies played a crucial role in our latest product development. Their team provided exceptional embedded systems solutions, from initial concept to final deployment. The project's success is a testament to their technical proficiency and commitment to delivering high-quality results. We look forward to future collaborations with them”",
+      "“I recently completed an embedded course at Manfree technologies , and I got selected at Qmax Systems. The curriculum is comprehensive and up-to-date, covering all the essential topics in embedded systems with a perfect blend of theory and hands-on practice. The learning environment is collaborative and inspiring, with plenty of opportunities for networking and professional growth. The fees is affordable to middle class students who are looking for this course. Thanks to all the staffs who trained , especially Naveen brother who made me to have a strong foundation in C language.”",
   },
 ];
 

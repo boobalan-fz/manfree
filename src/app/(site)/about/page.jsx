@@ -6,6 +6,7 @@ import WhyUsAbout from "@/components/aboutPage/WhyUsAbout";
 import CourseTitle from "@/components/course/CourseTitle";
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -40,12 +41,13 @@ const page = () => {
               with a<span className="text-[#FF9A53]"> Free Trial Class</span>
             </p>
           </div>
-          <button
+          <Link
+            href={`/contact`}
             className={`${rubik.className} font-semibold flex gap-2 items-center sm:text-3xl text-2xl md:text-2xl lg:text-3xl bg-gradient-to-r from-[#FF9A53] to-[#FFCF53] sm:px-8 px-4 md:px-4 lg:px-8 py-4 self-center rounded-xl`}
           >
             Book Now
             <ChevronDoubleRightIcon className="sm:h-9 h-5 md:h-5 lg:h-9 w-9 " />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -10,10 +10,16 @@ import {
 const UpcomingBatchCard = ({ data }) => {
   return (
     <div className="relative">
-      <div className="px-2 capitalize text-sm  border border-red-600 rounded-full text-red-600 text-[20px] font-normal absolute right-3 top-8">
+      <div
+        className={`px-2 capitalize text-sm  border ${
+          data?.mode == "offline"
+            ? "border-red-600 text-red-600"
+            : "border-green-500 text-green-500"
+        }  rounded-full  text-[20px] font-normal absolute right-3 top-8`}
+      >
         {data?.mode}
       </div>
-      <div className="mt-5  pr-5 pl-10 pb-5 pt-10 rounded-3xl grid grid-cols-2 shadow-md">
+      <div className="mt-5  pr-5 pl-10 pb-5 pt-8 rounded-3xl grid grid-cols-2 gap-5 shadow-md border">
         <div className="col-span-1">
           {/* <h1
             className={`${rubik.className} font-semibold text-[24px] text-[#0C7D81]`}

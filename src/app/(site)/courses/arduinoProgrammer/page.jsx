@@ -3,7 +3,7 @@ import { poppins, rubik } from "@/app/font";
 import CourseTitle from "@/components/course/CourseTitle";
 import Image from "next/image";
 import embeddedpic from "@/assets/embeddedpic.jpg";
-
+import JoinCourseDialog from "@/components/common/JoinCourseDialog";
 import tikicon from "@/assets/tick.svg";
 import {
   courseIncludes,
@@ -15,13 +15,20 @@ import FaqDisclosure from "@/components/course/FaqDisclosure";
 import Disclosure from "@/components/course/Disclosure";
 import { useGetCourse } from "@/features/course/course.hooks";
 import UpcomingBatchCard from "@/components/course/UpcomingBatchCard";
+import { useState } from "react";
 
 const Page = () => {
+  const [open, setOpen] = useState(false);
   const { data } = useGetCourse("66b602cd86bde535898fdc6c");
 
   return (
     <div className="">
-      <CourseTitle title="Certified Arduino Programmer" data />
+      <CourseTitle
+        title="Certified Arduino & IoT Programmer"
+        data
+        module={10}
+        hours={120}
+      />
       <div className=" max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-5 md:grid-cols-1 lg:grid-cols-5 sm:px-20 px-5 md:px-5 lg:px-20 sm:gap-20 gap-5 md:gap-5 lg:gap-20 ">
           <div className="py-4 sm:col-span-3">
@@ -179,7 +186,7 @@ const Page = () => {
                   Upcoming Batches
                 </h1>
 
-                <div className="grid grid-cols-2">
+                <div className="grid sm:grid-cols-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5 ">
                   {data?.batches.map((item, index) => (
                     <UpcomingBatchCard data={item} key={index} />
                   ))}
@@ -217,7 +224,8 @@ const Page = () => {
                   </ul>
 
                   <button
-                    className={`${rubik.className}  bg-[#183D6D] mt-5 text-[#FF9A53] rounded-lg text-center py-2 font-semibold w-full text-lg`}
+                    onClick={() => setOpen(!open)}
+                    className={`${rubik.className}  bg-[#183D6D] mt-5 text-[#FF9A53] rounded-lg text-center py-2 font-semibold w-full text-lg cursor-pointer`}
                   >
                     Join Course
                   </button>
@@ -229,12 +237,14 @@ const Page = () => {
 
         <div className="sm:hidden fixed bottom-0  w-full">
           <button
-            className={`${rubik.className}  bg-[#183D6D] text-[#FF9A53]  text-center py-2 font-semibold w-full text-lg`}
+            onClick={() => setOpen(!open)}
+            className={`${rubik.className}  bg-[#183D6D] text-[#FF9A53]  text-center py-2 font-semibold w-full text-lg cursor-pointer`}
           >
             Join Course
           </button>
         </div>
       </div>
+      <JoinCourseDialog isOpen={open} close={() => setOpen(false)} />
     </div>
   );
 };

@@ -14,13 +14,21 @@ import FaqDisclosure from "@/components/course/FaqDisclosure";
 import Disclosure from "@/components/course/Disclosure";
 import { useGetCourse } from "@/features/course/course.hooks";
 import UpcomingBatchCard from "@/components/course/UpcomingBatchCard";
+import { useState } from "react";
+import JoinCourseDialog from "@/components/common/JoinCourseDialog";
 
 const Page = () => {
+  const [open, setOpen] = useState(false);
   const { data } = useGetCourse("66b6029786bde535898fdc66");
 
   return (
     <div className="">
-      <CourseTitle title="Certified Embedded Engineer Professional" data />
+      <CourseTitle
+        title="Certified Embedded Engineer Professional"
+        data
+        module={10}
+        hours={650}
+      />
       <div className=" max-w-[1920px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-5 md:grid-cols-1 lg:grid-cols-5 sm:px-20 px-5 md:px-5 lg:px-20 sm:gap-20 gap-5 md:gap-5 lg:gap-20  ">
           <div className="py-4 sm:col-span-3">
@@ -218,6 +226,7 @@ const Page = () => {
                   </ul>
 
                   <button
+                    onClick={() => setOpen(!open)}
                     className={`${rubik.className}  bg-[#183D6D] mt-5 text-[#FF9A53] rounded-lg text-center py-2 font-semibold w-full text-lg`}
                   >
                     Join Course
@@ -230,11 +239,13 @@ const Page = () => {
       </div>
       <div className="sm:hidden fixed bottom-0  w-full">
         <button
+          onClick={() => setOpen(!open)}
           className={`${rubik.className}  bg-[#183D6D] text-[#FF9A53]  text-center py-2 font-semibold w-full text-lg`}
         >
           Join Course
         </button>
       </div>
+      <JoinCourseDialog isOpen={open} close={() => setOpen(false)} />
     </div>
   );
 };

@@ -29,7 +29,7 @@ import achieveTwo from "@/assets/achieveTwo.jpg";
 import achieveThree from "@/assets/achieveThree.jpg";
 import Marquee from "@/components/homepage/Marquee";
 import Link from "next/link";
-import { courses } from "@/constant/dummy";
+import { courses, reviews } from "@/constant/dummy";
 import UpcomingEvents from "@/components/homepage/UpcomingEvents";
 import ReviewCard from "@/components/homepage/ReviewCard";
 import SkillToNextLevel from "@/components/homepage/SkillToNextLevel";
@@ -46,7 +46,7 @@ const SpecialCardData = [
   {
     title: "Product Development",
     content:
-      "Create custom solutions with our expert product development in PIC, STM 32, and Arduino microcontrollers.",
+      "Create custom-built Embedded & IoT solutions perfectly tailored to your needs, with our expert product development team.",
     img: productdevelopment,
   },
   {
@@ -304,12 +304,9 @@ export default function Home() {
           </p>
         </div>
         <div className="grid sm:grid-cols-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
-          <ReviewCard />
+          {reviews?.map((item, index) => (
+            <ReviewCard name={item?.name} content={item?.content} key={index} />
+          ))}
         </div>
       </div>
       <div className="sm:px-20 px-5 md:px-5 lg:px-20 py-10 grid sm:grid-cols-2 grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10 ">
@@ -327,12 +324,13 @@ export default function Home() {
             high-demand fields. Our experienced instructors ensure comprehensive
             learning. Join us and advance your career with confidence.
           </p>
-          <button
+          <Link
+            href={`/contact`}
             className={`${rubik.className} font-semibold flex gap-2 items-center sm:text-3xl text-2xl md:text-2xl lg:text-3xl bg-gradient-to-r from-[#FF9A53] to-[#FFCF53] sm:px-8 px-5 md:px-5 lg:px-8 py-4 self-start rounded-xl`}
           >
             Book Now
             <ChevronDoubleRightIcon className="sm:h-9 sm:w-9 h-7 md:h-7 lg:h-9" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

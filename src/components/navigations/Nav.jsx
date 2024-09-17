@@ -17,6 +17,10 @@ const Nav = () => {
       name: "COURSES",
       href: "/courses",
     },
+    // {
+    //   name: "BATCHES",
+    //   href: "/batches",
+    // },
     {
       name: "CONTACT US",
       href: "/contact",

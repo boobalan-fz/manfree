@@ -83,7 +83,7 @@ const Footer = () => {
   const socials = [
     {
       img: instagram,
-      link: "",
+      link: "https://www.instagram.com/manfreetech?igsh=MXdlMWh4MGlxMzFqdw==",
     },
     {
       img: facebook,
@@ -164,14 +164,14 @@ const Footer = () => {
               </h1>
               <div className="flex gap-5 items-center">
                 {socials.map((item, ind) => (
-                  <a
+                  <Link
                     target="_blank"
-                    href={`/${item.link}`}
+                    href={`${item.link}`}
                     key={ind}
                     className="max-h-9 max-w-9 text-[#FF9A53]"
                   >
                     <Image src={item.img} alt="social " />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </span>

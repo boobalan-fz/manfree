@@ -1,5 +1,5 @@
 const CourseFilterButtons = ({ selectedTag, onSelectTag }) => {
-  const tags = ["All", "Embedded", "Software", "Industrial"];
+  const tags = ["All", "PLC", "Embedded"];
 
   return (
     <div className="flex flex-wrap gap-5  pb-10">

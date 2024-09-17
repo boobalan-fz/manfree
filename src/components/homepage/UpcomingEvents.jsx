@@ -30,8 +30,9 @@ const UpcomingEvents = () => {
             Don&lsquo;t miss out on these opportunities to grow and learn!
           </p>
 
-          <button className="pt-10 flex gap-4  text-secondary sm:text-xl text-lg md:text-lg lg:text-xl items-center ">
-            Explore Events <ArrowLongRightIcon className="w-7 h-7" />
+          <button className="pt-10 flex gap-4  text-secondary font-bold sm:text-xl text-lg md:text-lg lg:text-xl items-center ">
+            Coming Soon !!
+            {/* <ArrowLongRightIcon className="w-7 h-7" /> */}
           </button>
         </div>
       </div>

@@ -26,10 +26,11 @@ const CourseCard = ({ data }) => {
         <div className="flex gap-5 px-6 pb-5 grow items-end">
           <div className="flex gap-2 items-center text-[#696969]">
             <BookOpenIcon className="w-5 h-5 text-[#FF9A53] text-base" />
-            22 Modules
+            {data?.modules} Modules
           </div>
           <div className="flex gap-2 items-center text-[#696969]">
-            <ClockIcon className="w-5 h-5 text-[#FF9A53]" />6 Hrs
+            <ClockIcon className="w-5 h-5 text-[#FF9A53]" />
+            {data?.hours} Hrs
           </div>
         </div>
       </Link>
